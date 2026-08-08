@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<a href="/blog/">&larr; Back to Blog</a>
+<h1 style="margin-top:1rem;">{{ title }}</h1>
+<div class="date" style="margin-bottom:2rem;">{{ date | readableDate }}</div>
+{% if image %}<img src="{{ image }}" alt="{{ title }}" style="width:100%;border-radius:4px;margin-bottom:2rem;">{% endif %}
+{{ content | safe }}
