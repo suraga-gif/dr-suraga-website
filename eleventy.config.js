@@ -1,6 +1,42 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
+// Font files are copied from the installed @fontsource packages, so no font binaries live in the repo
+const FONT_FILES = [
+  "poppins/files/poppins-latin-500-normal.woff2",
+  "poppins/files/poppins-latin-600-normal.woff2",
+  "lora/files/lora-latin-400-normal.woff2",
+  "lora/files/lora-latin-400-italic.woff2",
+  "lora/files/lora-latin-600-normal.woff2",
+];
+
 export default function (eleventyConfig) {
-  // Copy static assets (CSS, JS, fonts, images) straight to the built site
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // Static assets. Photos in src/assets/photos are NOT copied: the image plugin makes resized versions instead.
+  eleventyConfig.addPassthroughCopy("src/assets/css");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  for (const file of FONT_FILES) {
+    eleventyConfig.addPassthroughCopy({
+      [`node_modules/@fontsource/${file}`]: `assets/fonts/${file.split("/").pop()}`,
+    });
+  }
+
+  // Every <img> in the built pages is resized and converted to modern formats (AVIF/WebP) automatically
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp", "jpeg"],
+    widths: [400, 800, 1200],
+    urlPath: "/img/",
+    outputDir: "./_site/img/",
+    htmlOptions: {
+      imgAttributes: { loading: "lazy", decoding: "async" },
+    },
+  });
+
+  eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  eleventyConfig.addFilter("telLink", (phone) => `tel:${phone}`);
+  eleventyConfig.addFilter("whatsappLink", (number, message) =>
+    `https://wa.me/${number}${message ? `?text=${encodeURIComponent(message)}` : ""}`
+  );
 
   return {
     dir: {

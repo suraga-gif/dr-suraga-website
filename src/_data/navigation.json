@@ -1,0 +1,9 @@
+[
+  { "label": "About", "url": "/about/" },
+  { "label": "Treatments", "url": "/specialties/" },
+  { "label": "Robotic surgery", "url": "/robotic-surgery/" },
+  { "label": "Blog", "url": "/blog/" },
+  { "label": "Videos", "url": "/videos/" },
+  { "label": "Publications", "url": "/publications/" },
+  { "label": "For doctors", "url": "/for-doctors/" }
+]

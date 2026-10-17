@@ -1,0 +1,32 @@
+{
+  "url": "https://drsuraga.com",
+  "launched": false,
+  "reviewBanner": true,
+  "notice": "",
+
+  "name": "Dr. Suraga Belakawadi",
+  "shortName": "Dr. Suraga",
+  "title": "Robotic & Laparoscopic Surgical Oncologist",
+  "degrees": "MBBS, DNB (General Surgery), MCh (Surgical Oncology), FMASO",
+  "fellowship": "Fellowship in Robotic & Laparoscopic Surgical Oncology",
+  "honours": "Gold medal, MCh Surgical Oncology",
+  "position": "Attending Consultant",
+  "hospital": "KIMS-MACS Hospital",
+  "area": "Mahadevapura, Bengaluru",
+  "address": "",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=KIMS-MACS+Hospital+Mahadevapura+Bengaluru",
+
+  "phone": "+917829245125",
+  "phoneDisplay": "+91 78292 45125",
+  "whatsapp": "917829245125",
+  "whatsappMessage": "Hello Dr. Suraga, I would like to book an appointment.",
+  "email": "suraga.b@gmail.com",
+  "hours": "Monday to Saturday, 9:00 am to 3:00 pm",
+
+  "social": {
+    "instagram": "https://www.instagram.com/onco_outreach/",
+    "linkedin": "https://www.linkedin.com/in/suraga-b-4839b9282",
+    "youtube": "",
+    "facebook": ""
+  }
+}

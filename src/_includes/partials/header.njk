@@ -1,0 +1,24 @@
+{% from "partials/icons.njk" import icon %}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark-name">{{ site.name }}</span>
+      <span class="wordmark-role">Surgical Oncologist</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-open">{{ icon("menu") }}</span>
+      <span class="menu-close">{{ icon("close") }}</span>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in navigation %}
+        <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+      <a class="btn btn-primary nav-cta" href="/appointment/">Book appointment</a>
+    </nav>
+  </div>
+</header>

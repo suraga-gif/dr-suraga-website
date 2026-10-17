@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle = (title + " | " + site.name) if title else (site.name + " | " + site.title + ", Bengaluru") %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ description or ('Robotic and laparoscopic cancer surgery in Bengaluru by ' + site.name + ', ' + site.position + ' at ' + site.hospital + '.') }}">
+  {%- if not site.launched %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  <meta name="theme-color" content="#185FA5">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {%- if site.reviewBanner %}
+  <p class="review-banner">Preview site. Medical content is awaiting Dr. Suraga’s review.</p>
+  {%- endif %}
+  {%- if site.notice %}
+  <p class="notice-banner">{{ site.notice }}</p>
+  {%- endif %}
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/action-bar.njk" %}
+
+  <script src="/assets/js/menu.js" defer></script>
+</body>
+</html>

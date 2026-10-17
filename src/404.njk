@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+title: Page not found
+eleventyExcludeFromCollections: true
+---
+<section class="section">
+  <div class="container prose">
+    <h1>This page doesn’t exist</h1>
+    <p>The link may be old, or the address may have a typing mistake. You can go to the home page, or call <a href="{{ site.phone | telLink }}">{{ site.phoneDisplay }}</a> to book an appointment.</p>
+    <div class="button-row">
+      <a class="btn btn-primary" href="/">Go to home page</a>
+    </div>
+  </div>
+</section>

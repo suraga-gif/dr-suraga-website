@@ -1,0 +1,39 @@
+{% from "partials/icons.njk" import icon %}
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-id">
+      <p class="footer-name">{{ site.name }}</p>
+      <p class="footer-degrees">{{ site.degrees }}</p>
+      <p>{{ site.title }}<br>{{ site.position }}, {{ site.hospital }}, {{ site.area }}</p>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <ul class="footer-list">
+        <li>{{ icon("phone") }}<a href="{{ site.phone | telLink }}">{{ site.phoneDisplay }}</a></li>
+        <li>{{ icon("whatsapp") }}<a href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">WhatsApp</a></li>
+        <li>{{ icon("mail") }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li>{{ icon("clock") }}<span>{{ site.hours }}</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Follow</h2>
+      <ul class="footer-list">
+        {%- if site.social.instagram %}<li>{{ icon("instagram") }}<a href="{{ site.social.instagram }}" rel="noopener">Instagram: @onco_outreach</a></li>{% endif %}
+        {%- if site.social.linkedin %}<li>{{ icon("linkedin") }}<a href="{{ site.social.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
+        {%- if site.social.youtube %}<li>{{ icon("youtube") }}<a href="{{ site.social.youtube }}" rel="noopener">YouTube</a></li>{% endif %}
+        {%- if site.social.facebook %}<li>{{ icon("facebook") }}<a href="{{ site.social.facebook }}" rel="noopener">Facebook</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="container"><div class="footer-legal">
+    <p>Information on this website is for general education and is not a substitute for a consultation. In an emergency, go to the nearest hospital.</p>
+    <p>
+      <a href="/medical-disclaimer/">Medical disclaimer</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+      <span>© {{ "" | year }} {{ site.name }}</span>
+    </p>
+  </div></div>
+</footer>

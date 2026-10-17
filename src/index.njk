@@ -1,25 +1,140 @@
 ---
+layout: layouts/base.njk
 permalink: /
 ---
-<!doctype html>
-<html lang="en-IN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Dr. Suraga Belakawadi | Website coming soon</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #FAFAFA; color: #1A1A1A; font-family: Georgia, serif; text-align: center; padding: 16px; }
-    h1 { color: #185FA5; font-family: system-ui, sans-serif; margin: 0 0 .5rem; }
-    img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; }
-  </style>
-</head>
-<body>
-  <main>
-    <img src="/assets/img/profile.jpg" alt="Dr. Suraga Belakawadi">
-    <h1>Dr. Suraga Belakawadi</h1>
-    <p>Robotic &amp; Laparoscopic Surgical Oncologist · Bengaluru</p>
-    <p>New website coming soon.</p>
-  </main>
-</body>
-</html>
+{% from "partials/icons.njk" import icon %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-photo">
+      <img src="/assets/photos/dr-suraga-white-coat-full.jpg"
+        alt="Dr. Suraga Belakawadi in a white coat"
+        sizes="(min-width: 60em) 40vw, 100vw"
+        loading="eager" fetchpriority="high">
+    </div>
+
+    <div class="hero-text">
+      <h1 class="nameplate-name">{{ site.name }}</h1>
+      <p class="nameplate-degrees">{{ site.degrees }}</p>
+      <p class="nameplate-fellowship">{{ site.fellowship }}<br>{{ site.honours }}</p>
+      <hr class="nameplate-rule">
+      <p class="nameplate-role">{{ site.title }}</p>
+      <p class="nameplate-place">{{ site.position }}, {{ site.hospital }}, {{ site.area }}</p>
+
+      <p class="lede">I treat cancers of the digestive system, breast, female reproductive organs, head and neck, and soft tissues. Where it is the right choice for you, I use robotic or keyhole surgery, which means smaller cuts and usually a quicker return to normal life.</p>
+
+      <div class="button-row">
+        <a class="btn btn-primary" href="/appointment/">Book appointment</a>
+        <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
+      </div>
+      <p class="hero-hours">{{ icon("clock") }}Clinic: {{ site.hours }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="treat-heading">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="treat-heading">Cancers I treat</h2>
+      <p>Each page explains the condition in plain language: warning signs, tests, treatment options and what recovery looks like.</p>
+    </div>
+    <ul class="treat-list">
+      {%- for item in specialties %}
+      <li>
+        <a href="/specialties/{{ item.slug }}/">
+          <span class="treat-name">{{ item.name }}</span>
+          <span class="treat-summary">{{ item.summary }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-wash" aria-labelledby="robotic-heading">
+  <div class="container robotic-grid">
+    <div class="robotic-text">
+      <h2 id="robotic-heading">Neck surgery without a scar on the neck</h2>
+      <p>Cancers of the mouth, throat and salivary glands often need lymph nodes removed from the neck. The usual operation leaves a long scar across the neck that is visible every day.</p>
+      <p><strong>RIA-MIND</strong> (Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection) is a technique Dr. Suraga developed and published. The robot works through a small cut below the collarbone, where clothing covers it.</p>
+      <p><strong>PRIA</strong> applies the same scar-conscious thinking to robotic parotidectomy, the removal of a parotid salivary gland.</p>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="/robotic-surgery/">How robotic surgery works</a>
+      </div>
+    </div>
+
+    <figure class="incision-figure">
+      <svg viewBox="0 0 320 300" role="img" aria-labelledby="incision-title incision-desc">
+        <title id="incision-title">Where the incision is made</title>
+        <desc id="incision-desc">Outline of the head, neck and shoulders. A long dashed line on the side of the neck shows the usual neck dissection incision. A short solid blue line below the collarbone shows the RIA-MIND incision.</desc>
+        <g class="fig-body">
+          <ellipse cx="160" cy="72" rx="44" ry="54"/>
+          <path d="M136 120 L132 170 M184 120 L188 170"/>
+          <path d="M132 170 C108 180 62 184 30 208 L18 300 M188 170 C212 180 258 184 290 208 L302 300"/>
+          <path class="fig-clavicle" d="M152 194 C124 198 94 190 60 202 M168 194 C196 198 226 190 260 202"/>
+        </g>
+        <path class="fig-usual" d="M110 100 C114 138 128 166 156 184"/>
+        <path class="fig-riamind" d="M76 222 L114 217"/>
+      </svg>
+      <figcaption>
+        <span class="legend-item"><span class="legend-swatch legend-usual"></span>Usual neck dissection incision</span>
+        <span class="legend-item"><span class="legend-swatch legend-riamind"></span>RIA-MIND incision, below the collarbone</span>
+        <span class="figure-note">Simplified illustration. Incision placement is planned for each patient.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="about-heading">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <img src="/assets/photos/dr-suraga-white-coat.jpg"
+        alt="Portrait of Dr. Suraga Belakawadi"
+        sizes="(min-width: 60em) 30vw, 100vw">
+    </div>
+    <div class="about-text">
+      <h2 id="about-heading">About Dr. Suraga</h2>
+      <p>Dr. Suraga Belakawadi is a surgical oncologist: a surgeon who specialises in removing cancer. He completed his MCh in Surgical Oncology with a gold medal, after a DNB in General Surgery, and went on to a fellowship in robotic and laparoscopic surgical oncology.</p>
+      <p>He works as an {{ site.position }} at {{ site.hospital }}, {{ site.area }}.</p>
+      <p>Through <a href="{{ site.social.instagram }}" rel="noopener">@onco_outreach</a> on Instagram, he shares short, practical videos on spotting cancer early and understanding treatment.</p>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="/about/">Training and experience</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="doctors-band" aria-labelledby="doctors-heading">
+  <div class="container doctors-inner">
+    <div>
+      <h2 id="doctors-heading">Referring a patient?</h2>
+      <p>Share the case on WhatsApp or call directly. Dr. Suraga is glad to discuss whether robotic or minimally invasive surgery suits your patient.</p>
+    </div>
+    <div class="button-row">
+      <a class="btn btn-light" href="/for-doctors/">Information for doctors</a>
+      <a class="btn btn-outline-light" href="{{ site.whatsapp | whatsappLink('Hello Dr. Suraga, I would like to refer a patient.') }}">{{ icon("whatsapp") }}WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="visit-heading">
+  <div class="container">
+    <h2 id="visit-heading">Visit the clinic</h2>
+    <div class="visit-grid">
+    <div>
+      <dl class="visit-list">
+        <div><dt>{{ icon("clock") }}Clinic hours</dt><dd>{{ site.hours }}</dd></div>
+        <div><dt>{{ icon("pin") }}Hospital</dt><dd>{{ site.hospital }}<br>{{ site.address or site.area }}</dd></div>
+        <div><dt>{{ icon("phone") }}Phone</dt><dd><a href="{{ site.phone | telLink }}">{{ site.phoneDisplay }}</a></dd></div>
+      </dl>
+    </div>
+    <div class="visit-actions">
+      <p>Please bring any scans, biopsy reports and previous treatment records to your first visit.</p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="/appointment/">Book appointment</a>
+        <a class="btn btn-secondary" href="{{ site.mapUrl }}" rel="noopener">{{ icon("pin") }}Get directions</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+{% from "partials/icons.njk" import icon %}
+{#- Fixed contact bar, shown on phones only -#}
+<nav class="action-bar" aria-label="Quick contact">
+  <a href="{{ site.phone | telLink }}">{{ icon("phone") }}<span>Call</span></a>
+  <a class="action-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}<span>WhatsApp</span></a>
+  <a class="action-book" href="/appointment/">{{ icon("calendar") }}<span>Book</span></a>
+</nav>

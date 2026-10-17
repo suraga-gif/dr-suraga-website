@@ -1,0 +1,14 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- if site.launched -%}
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
+{%- else -%}
+# Preview: hidden from search engines until launch
+User-agent: *
+Disallow: /
+{%- endif %}
