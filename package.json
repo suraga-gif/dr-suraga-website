@@ -1,10 +1,17 @@
 {
-  "name": "drsuraga-website",
+  "name": "dr-suraga-website",
   "version": "1.0.0",
+  "private": true,
+  "description": "Website of Dr. Suraga Belakawadi, Robotic & Laparoscopic Surgical Oncologist, Bengaluru",
+  "type": "module",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "3.1.7"
   }
 }

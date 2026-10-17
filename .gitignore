@@ -1,0 +1,12 @@
+# Build output and dependencies (recreated automatically)
+_site/
+node_modules/
+.cache/
+
+# Personal Claude Code settings for this computer
+.claude/settings.local.json
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
