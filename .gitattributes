@@ -1,0 +1,9 @@
+# Keep line endings consistent between Windows, GitHub and the online editor
+* text=auto eol=lf
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.avif binary
+*.woff2 binary
+*.pdf binary
