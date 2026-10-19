@@ -6,7 +6,7 @@ description: Dr. Suraga Belakawadi, MCh Surgical Oncology (gold medal), robotic 
 summary: Robotic and laparoscopic surgical oncologist and Attending Consultant at KIMS-MACS Hospital, Mahadevpura, Bengaluru.
 permalink: /about/
 parent: { title: Home, url: / }
-reviewPending: true
+reviewPending: false
 headerPhoto: /assets/photos/dr-suraga-white-coat.jpg
 headerPhotoAlt: Portrait of Dr. Suraga Belakawadi
 ---

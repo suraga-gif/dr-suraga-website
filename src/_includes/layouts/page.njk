@@ -50,6 +50,26 @@ layout: layouts/base.njk
       </section>
       {%- endif %}
 
+      {%- if blogCategory %}
+      {%- set topicPosts = collections.posts | whereCategory(blogCategory) | limit(3) %}
+      {%- set topicVideos = collections.videos | whereCategory(blogCategory) | limit(2) %}
+      {%- if topicPosts.length or topicVideos.length %}
+      <section class="related-posts" aria-labelledby="learn-heading">
+        <h2 id="learn-heading">Read and watch</h2>
+        {%- if topicPosts.length %}
+        <div class="post-grid post-grid-compact">
+          {%- for post in topicPosts %}{% include "partials/post-card.njk" %}{% endfor %}
+        </div>
+        {%- endif %}
+        {%- if topicVideos.length %}
+        <div class="video-grid video-grid-compact">
+          {%- for video in topicVideos %}{% include "partials/video-card.njk" %}{% endfor %}
+        </div>
+        {%- endif %}
+      </section>
+      {%- endif %}
+      {%- endif %}
+
       {%- if "/specialties/" in page.url and page.url != "/specialties/" %}
       <nav class="related-list" aria-labelledby="other-heading">
         <h2 id="other-heading">Other cancers Dr. Suraga treats</h2>

@@ -1,0 +1,22 @@
+{#- One video. Expects `video`. The player only loads when the visitor taps it, so pages stay fast. -#}
+{% from "partials/icons.njk" import icon %}
+{%- set v = video.data.url | videoInfo %}
+<article class="video-card" data-category="{{ video.data.category }}">
+  <div class="video-frame{% if v.vertical %} video-frame-vertical{% endif %}" data-embed="{{ v.embedUrl }}" data-title="{{ video.data.title }}">
+    <button type="button" class="video-play video-play-{{ v.platform }}" aria-label="Play video: {{ video.data.title }}">
+      {%- if v.thumbnail %}
+      <img src="{{ v.thumbnail }}" alt="" loading="lazy" decoding="async" eleventy:ignore>
+      {%- else %}
+      <span class="video-placeholder">{{ icon("instagram") }}<span>{{ video.data.title }}</span></span>
+      {%- endif %}
+      <span class="video-play-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg></span>
+    </button>
+  </div>
+  <div class="video-card-body">
+    <h3 class="video-card-title">{{ video.data.title }}</h3>
+    {%- if video.data.description %}
+    <p class="video-card-text">{{ video.data.description }}</p>
+    {%- endif %}
+    <p class="video-card-link"><a href="{{ v.url }}" rel="noopener">Watch on {{ "YouTube" if v.platform == "youtube" else "Instagram" }}</a></p>
+  </div>
+</article>

@@ -104,6 +104,43 @@ permalink: /
   </div>
 </section>
 
+{%- set latestPosts = collections.posts | limit(3) %}
+{%- if latestPosts.length %}
+<section class="section section-wash" aria-labelledby="blog-heading">
+  <div class="container">
+    <div class="section-head section-head-row">
+      <div>
+        <h2 id="blog-heading">Understanding cancer</h2>
+        <p>Plain-language articles on warning signs, tests and recovery.</p>
+      </div>
+      <a class="btn btn-secondary" href="/blog/">All articles</a>
+    </div>
+    <div class="post-grid">
+      {%- for post in latestPosts %}{% include "partials/post-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{%- set homeVideos = collections.videos | whereFeatured | limit(3) %}
+{%- if not homeVideos.length %}{% set homeVideos = collections.videos | limit(3) %}{% endif %}
+{%- if homeVideos.length %}
+<section class="section" aria-labelledby="videos-heading">
+  <div class="container">
+    <div class="section-head section-head-row">
+      <div>
+        <h2 id="videos-heading">Videos</h2>
+        <p>Short explanations from <a href="{{ site.social.instagram }}" rel="noopener">@onco_outreach</a>.</p>
+      </div>
+      <a class="btn btn-secondary" href="/videos/">All videos</a>
+    </div>
+    <div class="video-grid">
+      {%- for video in homeVideos %}{% include "partials/video-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
 <section class="doctors-band" aria-labelledby="doctors-heading">
   <div class="container doctors-inner">
     <div>

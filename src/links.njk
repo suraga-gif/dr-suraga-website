@@ -1,0 +1,48 @@
+---
+# Phone-sized "link in bio" page for Instagram and LinkedIn profiles
+layout: layouts/base.njk
+title: Links
+description: Book an appointment, message on WhatsApp, and read the latest articles from Dr. Suraga Belakawadi, surgical oncologist in Bengaluru.
+permalink: /links/
+---
+{% from "partials/icons.njk" import icon %}
+<section class="links-page">
+  <div class="links-inner">
+    <div class="links-profile">
+      <img src="/assets/photos/dr-suraga-blue-shirt.jpg" alt="Dr. Suraga Belakawadi" sizes="112px" eleventy:widths="400" loading="eager">
+      <h1>{{ site.name }}</h1>
+      <p>{{ site.title }}<br>{{ site.hospital }}, {{ site.area }}</p>
+    </div>
+
+    <div class="links-actions">
+      <a class="btn btn-primary" href="/appointment/">{{ icon("calendar") }}Book an appointment</a>
+      <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}Message on WhatsApp</a>
+      <a class="btn btn-secondary" href="{{ site.phone | telLink }}">{{ icon("phone") }}Call {{ site.phoneDisplay }}</a>
+      <a class="btn btn-secondary" href="/">Visit the website</a>
+    </div>
+
+    {%- set linkPosts = collections.posts | limit(5) %}
+    {%- if linkPosts.length %}
+    <h2 class="links-heading">Latest articles</h2>
+    <ul class="links-list">
+      {%- for post in linkPosts %}
+      <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- set linkVideo = collections.videos | limit(1) %}
+    {%- if linkVideo.length %}
+    <h2 class="links-heading">Latest video</h2>
+    {%- set video = linkVideo[0] %}
+    {% include "partials/video-card.njk" %}
+    {%- endif %}
+
+    <p class="links-social">
+      {%- if site.social.instagram %}<a href="{{ site.social.instagram }}" rel="noopener">{{ icon("instagram", "Instagram") }}</a>{% endif %}
+      {%- if site.social.linkedin %}<a href="{{ site.social.linkedin }}" rel="noopener">{{ icon("linkedin", "LinkedIn") }}</a>{% endif %}
+      {%- if site.social.youtube %}<a href="{{ site.social.youtube }}" rel="noopener">{{ icon("youtube", "YouTube") }}</a>{% endif %}
+      {%- if site.social.facebook %}<a href="{{ site.social.facebook }}" rel="noopener">{{ icon("facebook", "Facebook") }}</a>{% endif %}
+    </p>
+  </div>
+</section>

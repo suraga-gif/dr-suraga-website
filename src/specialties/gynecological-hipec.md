@@ -4,6 +4,7 @@ breadcrumbTitle: Gynaecological cancers
 description: Ovarian, uterine and cervical cancer explained, including HIPEC (heated chemotherapy during surgery) and robotic surgery, in Bengaluru.
 summary: Cancers of the ovary, uterus and cervix. HIPEC, heated chemotherapy given during surgery, can help selected patients with ovarian cancer.
 order: 4
+blogCategory: Gynaecological cancers
 faqs:
   - question: Is HIPEC suitable for everyone with ovarian cancer?
     answer: No. HIPEC is considered for selected patients after all visible cancer has been removed. It depends on the stage, your general health and how the disease has responded to earlier treatment. Dr. Suraga will discuss whether it applies to you.

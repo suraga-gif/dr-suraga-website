@@ -1,0 +1,16 @@
+{#- One blog post in a list. Expects `post`. Works with or without a cover image. -#}
+<article class="post-card{% if not post.data.cover %} post-card-text{% endif %}">
+  {%- if post.data.cover %}
+  <a class="post-card-image" href="{{ post.url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ post.data.cover }}" alt="" sizes="(min-width: 64em) 22rem, (min-width: 40em) 45vw, 100vw">
+  </a>
+  {%- endif %}
+  <div class="post-card-body">
+    <p class="post-card-meta">{{ post.data.category }}</p>
+    <h3 class="post-card-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    {%- if post.data.summary %}
+    <p class="post-card-summary">{{ post.data.summary }}</p>
+    {%- endif %}
+    <p class="post-card-date"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></p>
+  </div>
+</article>

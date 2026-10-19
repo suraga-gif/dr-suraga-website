@@ -4,6 +4,7 @@ breadcrumbTitle: Pancreato-biliary cancers
 description: "Cancer of the pancreas, gallbladder and bile ducts explained: jaundice and other warning signs, tests, Whipple surgery and recovery, in Bengaluru."
 summary: Cancers of the pancreas and the bile drainage system. Jaundice is often the first sign.
 order: 5
+blogCategory: Pancreas and bile duct
 faqs:
   - question: Do gallstones cause gallbladder cancer?
     answer: Most people with gallstones never get cancer. Long-standing gallstones are a known risk factor, though, and sometimes cancer is found unexpectedly after the gallbladder is removed for stones. If this happens to you, see a cancer surgeon promptly, because further surgery may be needed.

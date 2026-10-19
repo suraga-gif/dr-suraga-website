@@ -3,6 +3,7 @@ title: Soft tissue sarcomas and skin cancers
 description: "Soft tissue sarcoma and skin cancer (melanoma and other skin cancers) explained: which lumps and moles need checking, planned biopsy, and surgery, in Bengaluru."
 summary: Sarcomas are rare cancers of fat, muscle and other connective tissue. Skin cancers include melanoma and the more common non-melanoma types. For both, the first operation matters most.
 order: 7
+blogCategory: Sarcoma and skin
 faqs:
   - question: Is every lump a sarcoma?
     answer: No. Most lumps under the skin are harmless, such as lipomas (fatty lumps). A lump that is growing, larger than 5 cm, painful, or deep under the muscle should be checked with a scan before anything is removed.

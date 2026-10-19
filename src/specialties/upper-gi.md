@@ -3,6 +3,7 @@ title: Upper GI cancers
 description: "Cancer of the oesophagus (food pipe) and stomach explained: warning signs, tests and treatment, including keyhole and robotic surgery, in Bengaluru."
 summary: Cancers of the oesophagus (food pipe) and stomach. They are often found late because early symptoms feel like ordinary acidity.
 order: 1
+blogCategory: Upper GI cancers
 faqs:
   - question: Is long-standing acidity a sign of cancer?
     answer: Usually not. But acidity that starts for the first time after the age of 45, does not settle with medicines, or comes with weight loss, difficulty swallowing or vomiting should be checked with an endoscopy.

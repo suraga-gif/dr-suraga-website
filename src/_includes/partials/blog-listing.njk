@@ -1,0 +1,46 @@
+{#- Blog list page. Expects `listPosts` and `activeCategory` (null on the main page). -#}
+{% from "partials/icons.njk" import icon %}
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        {%- if activeCategory %}
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">{{ activeCategory.name }}</span></li>
+        {%- else %}
+        <li><span aria-current="page">Blog</span></li>
+        {%- endif %}
+      </ol>
+    </nav>
+    <h1>{{ activeCategory.name if activeCategory else "Blog" }}</h1>
+    <p class="page-lede">Plain-language articles on spotting cancer early, understanding tests and treatment, and recovering well.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    <nav class="topic-filter" aria-label="Blog topics">
+      <ul>
+        <li><a href="/blog/"{% if not activeCategory %} aria-current="page"{% endif %}>All articles</a></li>
+        {%- for cat in categories | categoriesUsedIn(collections.posts) %}
+        <li><a href="/blog/category/{{ cat.slug }}/"{% if activeCategory and activeCategory.slug == cat.slug %} aria-current="page"{% endif %}>{{ cat.name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    {%- if listPosts.length %}
+    <div class="post-grid">
+      {%- for post in listPosts %}{% include "partials/post-card.njk" %}{% endfor %}
+    </div>
+    {%- else %}
+    <div class="empty-state">
+      <p>No articles on this topic yet. Short videos on cancer awareness are posted regularly on Instagram.</p>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="{{ site.social.instagram }}" rel="noopener">{{ icon("instagram") }}Follow @onco_outreach</a>
+        {%- if activeCategory %}<a class="btn btn-secondary" href="/blog/">See all articles</a>{% endif %}
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+</section>

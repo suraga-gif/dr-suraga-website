@@ -6,7 +6,7 @@ description: Refer a patient to Dr. Suraga Belakawadi, surgical oncologist in Be
 summary: Dr. Suraga welcomes referrals and is glad to discuss any case before you send the patient.
 permalink: /for-doctors/
 parent: { title: Home, url: / }
-reviewPending: true
+reviewPending: false
 ---
 
 ## How to refer

@@ -1,0 +1,12 @@
+[
+  { "name": "Upper GI cancers", "slug": "upper-gi" },
+  { "name": "Breast cancer", "slug": "breast" },
+  { "name": "Colorectal cancer", "slug": "colorectal" },
+  { "name": "Gynaecological cancers", "slug": "gynaecological" },
+  { "name": "Pancreas and bile duct", "slug": "pancreato-biliary" },
+  { "name": "Head and neck", "slug": "head-and-neck" },
+  { "name": "Sarcoma and skin", "slug": "sarcoma-and-skin" },
+  { "name": "Robotic surgery", "slug": "robotic-surgery" },
+  { "name": "Prevention and screening", "slug": "prevention-and-screening" },
+  { "name": "Patient guides", "slug": "patient-guides" }
+]

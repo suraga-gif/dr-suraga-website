@@ -1,0 +1,15 @@
+---
+# One page per blog topic, e.g. /blog/category/breast/
+layout: layouts/base.njk
+pagination:
+  data: categories
+  size: 1
+  alias: topic
+permalink: "/blog/category/{{ topic.slug }}/"
+eleventyComputed:
+  title: "{{ topic.name }} articles"
+  description: "Articles on {{ topic.name | lower }} by Dr. Suraga Belakawadi, surgical oncologist in Bengaluru."
+---
+{%- set activeCategory = topic %}
+{%- set listPosts = collections.posts | whereCategory(topic.name) %}
+{% include "partials/blog-listing.njk" %}

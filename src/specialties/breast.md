@@ -3,6 +3,7 @@ title: Breast cancer
 description: "Breast cancer explained: warning signs, screening, tests and surgery options, including breast-conserving, endoscopic and robotic surgery, in Bengaluru."
 summary: The most common cancer in women in India. Found early, it is very treatable, and many women can keep their breast.
 order: 2
+blogCategory: Breast cancer
 faqs:
   - question: My lump is painless. Does that mean it is not cancer?
     answer: No. Most breast cancers are painless. Any new lump in the breast or armpit should be examined, whether it hurts or not.

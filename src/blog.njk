@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: Plain-language articles on cancer warning signs, screening, surgery and recovery by Dr. Suraga Belakawadi, surgical oncologist in Bengaluru.
+permalink: /blog/
+---
+{%- set activeCategory = null %}
+{%- set listPosts = collections.posts %}
+{% include "partials/blog-listing.njk" %}

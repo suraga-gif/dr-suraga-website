@@ -3,5 +3,5 @@ export default {
   layout: "layouts/page.njk",
   permalink: (data) => `/specialties/${data.page.fileSlug}/`,
   parent: { title: "Cancers treated", url: "/specialties/" },
-  reviewPending: true,
+  reviewPending: false,
 };

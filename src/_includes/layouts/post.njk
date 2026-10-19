@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+---
+{#- A blog post: cover image, article, key takeaways, sharing, related posts -#}
+{% from "partials/icons.njk" import icon %}
+{%- set postUrl = site.url + page.url %}
+<article class="page post">
+  <header class="page-header">
+    <div class="container">
+      {% include "partials/breadcrumbs.njk" %}
+      <p class="post-category">{{ category }}</p>
+      <h1>{{ title }}</h1>
+      {%- if summary %}
+      <p class="page-lede">{{ summary }}</p>
+      {%- endif %}
+      <p class="post-meta">
+        <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+        <span aria-hidden="true">|</span>
+        <span>{{ content | readingTime }}</span>
+      </p>
+    </div>
+  </header>
+
+  <div class="container page-body">
+    <div class="page-main">
+      {%- if reviewPending %}{% include "partials/draft-note.njk" %}{% endif %}
+
+      {%- if cover %}
+      <figure class="post-cover">
+        <img src="{{ cover }}" alt="{{ coverAlt }}" sizes="(min-width: 64em) 42rem, 100vw" loading="eager">
+      </figure>
+      {%- endif %}
+
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+
+      {%- if takeaways and takeaways.length %}
+      <aside class="takeaways" aria-labelledby="takeaways-heading">
+        <h2 id="takeaways-heading">Key points</h2>
+        <ul>
+          {%- for point in takeaways %}
+          <li>{{ point }}</li>
+          {%- endfor %}
+        </ul>
+      </aside>
+      {%- endif %}
+
+      <div class="post-share">
+        <p class="post-share-label">Share this article</p>
+        <div class="button-row">
+          <a class="btn btn-whatsapp" href="https://wa.me/?text={{ (title + ' ' + postUrl) | urlencode }}" rel="noopener">{{ icon("whatsapp") }}Share on WhatsApp</a>
+          <button class="btn btn-secondary" type="button" data-copy-link="{{ postUrl }}">Copy link</button>
+          {%- if instagram %}
+          <a class="btn btn-secondary" href="{{ instagram }}" rel="noopener">{{ icon("instagram") }}See it on Instagram</a>
+          {%- endif %}
+        </div>
+      </div>
+
+      <p class="post-disclaimer">This article is general information to help you understand a condition. It is not a diagnosis or a substitute for a consultation. See the <a href="/medical-disclaimer/">medical disclaimer</a>.</p>
+
+      {%- set related = collections.posts | whereCategory(category) | excludeUrl(page.url) | limit(3) %}
+      {%- if related.length %}
+      <section class="related-posts" aria-labelledby="related-heading">
+        <h2 id="related-heading">More on {{ category | lower }}</h2>
+        <div class="post-grid post-grid-compact">
+          {%- for post in related %}{% include "partials/post-card.njk" %}{% endfor %}
+        </div>
+      </section>
+      {%- endif %}
+    </div>
+
+    <aside class="page-aside">
+      {% include "partials/book-card.njk" %}
+    </aside>
+  </div>
+</article>

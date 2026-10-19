@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Videos
+description: Short videos on cancer awareness, early warning signs and surgery by Dr. Suraga Belakawadi, surgical oncologist in Bengaluru.
+permalink: /videos/
+---
+{% from "partials/icons.njk" import icon %}
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><span aria-current="page">Videos</span></li>
+      </ol>
+    </nav>
+    <h1>Videos</h1>
+    <p class="page-lede">Short explanations of warning signs, tests and surgery, from Dr. Suraga’s YouTube channel and <a href="{{ site.social.instagram }}" rel="noopener">@onco_outreach</a> on Instagram.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    {%- if collections.videos.length %}
+      {%- set usedCategories = categories | categoriesUsedIn(collections.videos) %}
+      {%- if usedCategories.length > 1 %}
+      <div class="topic-filter" role="group" aria-label="Filter videos by topic">
+        <ul>
+          <li><button type="button" data-video-filter="" aria-pressed="true">All videos</button></li>
+          {%- for cat in usedCategories %}
+          <li><button type="button" data-video-filter="{{ cat.name }}" aria-pressed="false">{{ cat.name }}</button></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+    <div class="video-grid">
+      {%- for video in collections.videos %}{% include "partials/video-card.njk" %}{% endfor %}
+    </div>
+    {%- else %}
+    <div class="empty-state">
+      <p>Videos will appear here soon. Meanwhile, short cancer-awareness videos are posted regularly on Instagram.</p>
+      <div class="button-row">
+        <a class="btn btn-secondary" href="{{ site.social.instagram }}" rel="noopener">{{ icon("instagram") }}Follow @onco_outreach</a>
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+</section>

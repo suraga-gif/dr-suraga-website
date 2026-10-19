@@ -3,6 +3,7 @@ title: Colorectal cancers
 description: "Colon and rectal cancer explained: warning signs, tests, sphincter-sparing, robotic and keyhole surgery, and life after treatment, in Bengaluru."
 summary: Cancers of the colon and rectum, including sphincter-sparing surgery that avoids a permanent stoma bag wherever it is safe.
 order: 3
+blogCategory: Colorectal cancer
 faqs:
   - question: I have blood in my stool. Is it just piles?
     answer: It may be, but you cannot tell on your own. Bleeding from the back passage, especially after the age of 40 or with a change in bowel habit, should be examined. A colonoscopy may be needed.
