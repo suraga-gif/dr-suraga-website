@@ -43,6 +43,29 @@ export default function (eleventyConfig) {
     api.getFilteredByGlob("src/specialties/*.md").sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
   );
 
+  // Publications, newest first
+  eleventyConfig.addCollection("publications", (api) =>
+    api.getFilteredByGlob("src/publications/*.md").sort((a, b) => b.date - a.date)
+  );
+
+  // Group a list of publications into [{ year, items }], keeping their order (newest first)
+  eleventyConfig.addFilter("groupByYear", (items = []) => {
+    const groups = [];
+    for (const item of items) {
+      const year = item.data.year;
+      if (!groups.length || groups[groups.length - 1].year !== year) groups.push({ year, items: [] });
+      groups[groups.length - 1].items.push(item);
+    }
+    return groups;
+  });
+
+  // Bold Dr. Suraga's name in author lists, however it is written
+  eleventyConfig.addFilter("highlightAuthor", (authors = "") =>
+    String(authors)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/\b(Belakawadi S|Suraga B|Suraga Belakawadi|Belakawadi)\b/g, "<strong>$1</strong>")
+  );
+
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
   eleventyConfig.addFilter("telLink", (phone) => `tel:${phone}`);
   eleventyConfig.addFilter("whatsappLink", (number, message) =>

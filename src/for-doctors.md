@@ -13,7 +13,7 @@ reviewPending: true
 
 - **WhatsApp or call:** [+91 78292 45125](tel:+917829245125). This is the quickest way to discuss a case.
 - **Email:** [suraga.b@gmail.com](mailto:suraga.b@gmail.com)
-- **Clinic:** Monday to Saturday, 9:00 am to 3:00 pm, KIMS-MACS Hospital, Mahadevapura, Bengaluru
+- **Clinic:** Monday to Saturday, 9:00 am to 3:00 pm, KIMS-MACS Hospital, Mahadevpura, Bengaluru
 
 ## What to send
 

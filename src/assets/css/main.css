@@ -394,3 +394,18 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 
 .prose .treat-list { padding-left: 0; margin-bottom: 2rem; }
 .prose .treat-list li { margin: 0; }
+
+/* Publications */
+.prose .pub-year { font-size: 1.25rem; color: var(--ink-soft); margin: 2.5rem 0 0; padding-bottom: 0.5rem; border-bottom: 2px solid var(--blue); width: fit-content; }
+.prose .pub-year:first-child { margin-top: 0; }
+.prose .pub-list { list-style: none; padding: 0; margin: 0; }
+.prose .pub { margin: 0; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.pub p { margin: 0; }
+.pub-type { font-family: var(--font-head); font-size: var(--tiny); font-weight: 500; color: var(--ink-soft); }
+.prose .pub-title { font-size: 1.125rem; line-height: 1.4; margin: 0.25rem 0 0.5rem; }
+.pub-title a { text-decoration: none; }
+.pub-title a:hover { text-decoration: underline; }
+.pub-authors, .pub-source { font-size: var(--small); color: var(--ink-soft); line-height: 1.55; }
+.pub-authors strong { color: var(--ink); }
+.pub-summary { margin-top: 0.6rem !important; font-size: 1rem; }
+.pub-pdf { margin-top: 0.5rem !important; font-family: var(--font-head); font-size: var(--small); }

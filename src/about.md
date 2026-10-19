@@ -2,8 +2,8 @@
 layout: layouts/page.njk
 title: About Dr. Suraga Belakawadi
 breadcrumbTitle: About
-description: Dr. Suraga Belakawadi, MCh Surgical Oncology (gold medal), robotic and laparoscopic surgical oncologist at KIMS-MACS Hospital, Mahadevapura, Bengaluru.
-summary: Robotic and laparoscopic surgical oncologist and Attending Consultant at KIMS-MACS Hospital, Mahadevapura, Bengaluru.
+description: Dr. Suraga Belakawadi, MCh Surgical Oncology (gold medal), robotic and laparoscopic surgical oncologist at KIMS-MACS Hospital, Mahadevpura, Bengaluru.
+summary: Robotic and laparoscopic surgical oncologist and Attending Consultant at KIMS-MACS Hospital, Mahadevpura, Bengaluru.
 permalink: /about/
 parent: { title: Home, url: / }
 reviewPending: true
@@ -13,19 +13,18 @@ headerPhotoAlt: Portrait of Dr. Suraga Belakawadi
 
 Dr. Suraga Belakawadi is a surgical oncologist, a surgeon who specialises in removing cancer. His practice covers cancers of the oesophagus and stomach, breast, colon and rectum, the female reproductive organs, the pancreas and bile ducts, the head and neck, and soft tissue sarcomas. Wherever it is the right choice for the patient, he uses robotic and laparoscopic (keyhole) surgery.
 
+He believes good cancer care starts with listening. He takes time to explain each option clearly, involves families in decisions, and plans every treatment around the person, not only the disease.
+
 ## Qualifications and training
 
-1. **MBBS**
-2. **DNB, General Surgery**
-3. **MCh, Surgical Oncology**, awarded with a gold medal
-4. **Fellowship in Robotic and Laparoscopic Surgical Oncology**
-5. **FMASO**
-
-<!-- TO CONFIRM: institution and year for each qualification -->
+1. **MBBS**, 2009 to 2014: Al-Ameen Medical College, Vijayapura (Rajiv Gandhi University of Health Sciences)
+2. **DNB, General Surgery**, 2016 to 2019: Rajarshi Chhatrapati Shahu Maharaj Government Medical College and CPR Hospital, Kolhapur
+3. **MCh, Surgical Oncology**, 2020 to 2023: Acharya Harihar Post Graduate Institute of Cancer, Cuttack, Odisha. **Gold medalist.**
+4. **FMASO, Fellowship in Minimal Access Surgical Oncology** (robotic and laparoscopic), 2024 to 2025: Rajiv Gandhi University of Health Sciences
 
 ## Current position
 
-Attending Consultant, Department of Surgical Oncology, KIMS-MACS Hospital, Mahadevapura, Bengaluru.
+Attending Consultant, Department of Surgical Oncology, KIMS-MACS Hospital, Mahadevpura, Bengaluru.
 
 ## Areas of special interest
 

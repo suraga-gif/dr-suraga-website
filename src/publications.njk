@@ -1,0 +1,29 @@
+---
+layout: layouts/page.njk
+title: Publications
+description: Research papers and case reports by Dr. Suraga Belakawadi, surgical oncologist in Bengaluru, newest first.
+summary: Research papers and case reports, newest first.
+permalink: /publications/
+parent: { title: Home, url: / }
+---
+{%- for group in collections.publications | groupByYear %}
+<h2 class="pub-year">{{ group.year }}</h2>
+<ol class="pub-list">
+  {%- for pub in group.items %}
+  <li class="pub">
+    <p class="pub-type">{{ pub.data.type }}</p>
+    <h3 class="pub-title">
+      {%- if pub.data.link %}<a href="{{ pub.data.link }}" rel="noopener">{{ pub.data.title }}</a>{% else %}{{ pub.data.title }}{% endif -%}
+    </h3>
+    <p class="pub-authors">{{ pub.data.authors | highlightAuthor | safe }}</p>
+    <p class="pub-source"><em>{{ pub.data.journal }}</em>{% if pub.data.details and pub.data.details != (pub.data.year | string) %}. {{ pub.data.details }}{% else %}, {{ pub.data.year }}{% endif %}</p>
+    {%- if pub.data.summary %}
+    <p class="pub-summary">{{ pub.data.summary }}</p>
+    {%- endif %}
+    {%- if pub.data.pdf %}
+    <p class="pub-pdf"><a href="{{ pub.data.pdf }}">Download PDF</a></p>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ol>
+{%- endfor %}
