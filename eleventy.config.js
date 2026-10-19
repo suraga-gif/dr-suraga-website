@@ -17,6 +17,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" }); // e.g. /admin opens the editor
   // Files uploaded through the editor (images, PDFs). Images are also resized wherever a page shows them.
   eleventyConfig.addPassthroughCopy("src/uploads");
   for (const file of FONT_FILES) {

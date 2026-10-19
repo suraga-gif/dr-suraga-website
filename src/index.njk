@@ -21,7 +21,7 @@ permalink: /
       <p class="nameplate-role">{{ site.title }}</p>
       <p class="nameplate-place">{{ site.position }}, {{ site.hospital }}, {{ site.area }}</p>
 
-      <p class="lede">I treat cancers of the digestive system, breast, female reproductive organs, head and neck (including the thyroid), skin and soft tissues. Where it is the right choice for you, I use robotic or keyhole surgery, which means smaller cuts and usually a quicker return to normal life.</p>
+      <div class="lede">{{ home.intro | markdown | safe }}</div>
 
       <div class="button-row">
         <a class="btn btn-primary" href="/appointment/">Book appointment</a>
@@ -36,7 +36,7 @@ permalink: /
   <div class="container">
     <div class="section-head">
       <h2 id="treat-heading">Cancers I treat</h2>
-      <p>Each page explains the condition in plain language: warning signs, tests, treatment options and what recovery looks like.</p>
+      {{ home.treatIntro | markdown | safe }}
     </div>
     <ul class="treat-list">
       {%- for item in collections.specialties %}
@@ -54,10 +54,8 @@ permalink: /
 <section class="section section-wash" aria-labelledby="robotic-heading">
   <div class="container robotic-grid">
     <div class="robotic-text">
-      <h2 id="robotic-heading">Neck surgery without a scar on the neck</h2>
-      <p>Cancers of the mouth, throat and salivary glands often need lymph nodes removed from the neck. The usual operation leaves a long scar across the neck that is visible every day.</p>
-      <p><strong>RIA-MIND</strong> (Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection) avoids that scar. The robot works through small cuts below the collarbone, where clothing covers them. Dr. Suraga is a co-author of the 2026 study reporting results of RIA-MIND in 62 patients.</p>
-      <p><strong>PRIA</strong> (Parotidectomy by Robotic Infraclavicular Approach) uses the same route below the collarbone to remove tumours of the parotid salivary gland.</p>
+      <h2 id="robotic-heading">{{ home.roboticHeading }}</h2>
+      {{ home.roboticText | markdown | safe }}
       <div class="button-row">
         <a class="btn btn-secondary" href="/robotic-surgery/">How robotic surgery works</a>
       </div>
@@ -94,9 +92,7 @@ permalink: /
     </div>
     <div class="about-text">
       <h2 id="about-heading">About Dr. Suraga</h2>
-      <p>Dr. Suraga Belakawadi is a surgical oncologist: a surgeon who specialises in removing cancer. He completed his MCh in Surgical Oncology with a gold medal, after a DNB in General Surgery, and went on to a fellowship in robotic and laparoscopic surgical oncology.</p>
-      <p>He works as an {{ site.position }} at {{ site.hospital }}, {{ site.area }}.</p>
-      <p>Through <a href="{{ site.social.instagram }}" rel="noopener">@onco_outreach</a> on Instagram, he shares short, practical videos on spotting cancer early and understanding treatment.</p>
+      {{ home.aboutText | markdown | safe }}
       <div class="button-row">
         <a class="btn btn-secondary" href="/about/">Training and experience</a>
       </div>
@@ -145,7 +141,7 @@ permalink: /
   <div class="container doctors-inner">
     <div>
       <h2 id="doctors-heading">Referring a patient?</h2>
-      <p>Share the case on WhatsApp or call directly. Dr. Suraga is glad to discuss whether robotic or minimally invasive surgery suits your patient.</p>
+      {{ home.doctorsText | markdown | safe }}
     </div>
     <div class="button-row">
       <a class="btn btn-light" href="/for-doctors/">Information for doctors</a>
@@ -166,7 +162,7 @@ permalink: /
       </dl>
     </div>
     <div class="visit-actions">
-      <p>Please bring any scans, biopsy reports and previous treatment records to your first visit.</p>
+      {{ home.visitNote | markdown | safe }}
       <div class="button-row">
         <a class="btn btn-primary" href="/appointment/">Book appointment</a>
         <a class="btn btn-secondary" href="{{ site.mapUrl }}" rel="noopener">{{ icon("pin") }}Get directions</a>

@@ -1,0 +1,480 @@
+# Pages CMS configuration: this file decides what Dr. Suraga sees in the online editor (app.pagescms.org).
+# Docs: https://pagescms.org/docs/configuration/
+
+settings:
+  content:
+    merge: true # keep any technical settings in a file that the editor doesn't show
+
+media:
+  - name: images
+    label: Images
+    input: src/uploads/images
+    output: /uploads/images
+    rename: safe
+    categories: [image]
+  - name: documents
+    label: Documents (PDF)
+    input: src/uploads/documents
+    output: /uploads/documents
+    rename: safe
+    extensions: [pdf]
+
+content:
+  # ---------------------------------------------------------------- Blog
+  - name: blog
+    label: Blog posts
+    type: collection
+    path: src/blog
+    exclude: [blog.11tydata.js]
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, category, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: summary
+        label: Short summary
+        description: One or two sentences shown on the blog list and in Google results (about 160 characters).
+        type: text
+        required: true
+      - name: category
+        label: Topic
+        type: select
+        required: true
+        options:
+          values: &topics
+            - Upper GI cancers
+            - Breast cancer
+            - Colorectal cancer
+            - Gynaecological cancers
+            - Pancreas and bile duct
+            - Head and neck
+            - Sarcoma and skin
+            - Robotic surgery
+            - Prevention and screening
+            - Patient guides
+      - name: cover
+        label: Cover image
+        description: Optional. A wide photo works best. Never use a photo that shows a patient.
+        type: image
+        options:
+          media: images
+      - name: coverAlt
+        label: Describe the cover image
+        description: A short description for people who can't see the image, e.g. "Doctor examining a patient's mouth with a torch".
+        type: string
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+      - name: takeaways
+        label: Key points
+        description: 3 to 5 short points shown in a box at the end. They also work as an Instagram carousel script.
+        type: string
+        list:
+          max: 6
+      - name: tags
+        label: Tags
+        description: Optional keywords, one per line.
+        type: string
+        list: true
+      - name: instagram
+        label: Related Instagram post (link)
+        description: Optional. Paste the link to the matching Instagram post or reel.
+        type: string
+      - name: draft
+        label: Hide from website
+        description: Switch on to save the post without publishing it.
+        type: boolean
+
+  # ---------------------------------------------------------------- Videos
+  - name: videos
+    label: Videos
+    type: collection
+    path: src/videos
+    exclude: [videos.11tydata.js]
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, category, featured]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: url
+        label: Video link
+        description: Paste the link from YouTube or Instagram (the Share button gives you one). The site works out the rest.
+        type: string
+        required: true
+        pattern:
+          regex: "(youtube\\.com|youtu\\.be|instagram\\.com)"
+          message: Paste a YouTube or Instagram link
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Topic
+        type: select
+        options:
+          values: *topics
+      - name: description
+        label: Short description
+        type: text
+      - name: featured
+        label: Show on the home page
+        type: boolean
+
+  # ---------------------------------------------------------------- Publications
+  - name: publications
+    label: Publications
+    type: collection
+    path: src/publications
+    exclude: [publications.11tydata.js]
+    filename: "{fields.year}-{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, year, journal]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title of the paper
+        type: string
+        required: true
+      - name: authors
+        label: Authors
+        description: As written in the paper, e.g. "Belakawadi S, Goyal J, Pradhan S, et al."
+        type: string
+        required: true
+      - name: journal
+        label: Journal or conference
+        type: string
+        required: true
+      - name: details
+        label: Volume, issue and pages
+        description: e.g. "2024;15(2):312-320". Leave empty if you don't have them.
+        type: string
+      - name: year
+        label: Year
+        type: number
+        required: true
+      - name: date
+        label: Publication date
+        description: Used to put the list in order, newest first. If you only know the year, choose 1 January of that year.
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: [Original article, Review article, Case report, Conference presentation, Book chapter, Video article]
+      - name: link
+        label: Link to the paper
+        description: DOI, PubMed, journal or ResearchGate link.
+        type: string
+      - name: pdf
+        label: PDF of the paper
+        description: Optional. Upload only if the journal allows you to share it.
+        type: file
+        options:
+          media: documents
+      - name: summary
+        label: Plain-language summary
+        description: Optional. One or two sentences for patients.
+        type: text
+
+  # ---------------------------------------------------------------- Cancer pages
+  - name: specialties
+    label: Cancer pages
+    type: collection
+    path: src/specialties
+    exclude: [specialties.11tydata.js, index.njk]
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, order]
+      primary: title
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+      - name: summary
+        label: Short summary
+        description: Shown under the title and on the list of cancers.
+        type: text
+        required: true
+      - name: description
+        label: Google description
+        description: About 150 characters shown in Google search results.
+        type: text
+      - name: order
+        label: Position in the list
+        description: 1 is shown first.
+        type: number
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+      - name: faqs
+        label: Common questions
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Question
+            type: string
+            required: true
+          - name: answer
+            label: Answer
+            type: text
+            required: true
+
+  # ---------------------------------------------------------------- Robotic surgery pages
+  - name: robotic
+    label: Robotic surgery pages
+    type: collection
+    path: src/robotic-surgery
+    exclude: [robotic-surgery.11tydata.js]
+    format: yaml-frontmatter
+    operations:
+      create: false
+      rename: false
+      delete: false
+    view:
+      fields: [title]
+      primary: title
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+      - name: summary
+        label: Short summary
+        type: text
+      - name: description
+        label: Google description
+        type: text
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+      - name: faqs
+        label: Common questions
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Question
+            type: string
+          - name: answer
+            label: Answer
+            type: text
+      - name: sources
+        label: References
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{citation}"
+        fields:
+          - name: citation
+            label: Citation
+            type: text
+          - name: url
+            label: Link
+            type: string
+          - name: linkText
+            label: Link text
+            description: Optional. Leave empty to show "Read the paper".
+            type: string
+
+  # ---------------------------------------------------------------- Single pages
+  - name: about
+    label: About page
+    type: file
+    path: src/about.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: summary
+        label: Short summary
+        type: text
+      - name: description
+        label: Google description
+        type: text
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+
+  - name: for-doctors
+    label: For doctors page
+    type: file
+    path: src/for-doctors.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Page title
+        type: string
+      - name: summary
+        label: Short summary
+        type: text
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: home
+    label: Home page text
+    type: file
+    path: src/_data/home.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: intro
+        label: Introduction (under your name)
+        type: text
+      - name: treatIntro
+        label: Text above the list of cancers
+        type: text
+      - name: roboticHeading
+        label: Robotic surgery section heading
+        type: string
+      - name: roboticText
+        label: Robotic surgery section text
+        type: rich-text
+        options:
+          format: markdown
+          media: false
+      - name: aboutText
+        label: About section text
+        type: rich-text
+        options:
+          format: markdown
+          media: false
+      - name: doctorsText
+        label: "Referring a patient? text"
+        type: text
+      - name: visitNote
+        label: Note above the Book button (what to bring)
+        type: text
+
+  - name: settings
+    label: Contact details and settings
+    type: file
+    path: src/_data/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: notice
+        label: Announcement banner
+        description: Shown at the top of every page, e.g. "Dr. Suraga is on leave from 12 to 15 November." Leave empty to hide it.
+        type: string
+      - name: phone
+        label: Phone number for calls
+        description: With country code and no spaces, e.g. +917829245125
+        type: string
+        required: true
+      - name: phoneDisplay
+        label: Phone number as shown on the website
+        type: string
+        required: true
+      - name: whatsapp
+        label: WhatsApp number
+        description: Country code and number, no + or spaces, e.g. 917829245125
+        type: string
+        required: true
+      - name: whatsappMessage
+        label: First line of a WhatsApp message
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: hours
+        label: Clinic hours
+        type: string
+      - name: position
+        label: Position
+        type: string
+      - name: hospital
+        label: Hospital
+        type: string
+      - name: area
+        label: Area (short)
+        type: string
+      - name: address
+        label: Full address
+        type: text
+      - name: mapUrl
+        label: Google Maps link
+        type: string
+      - name: social
+        label: Social media links
+        description: Leave a link empty to hide that icon.
+        type: object
+        fields:
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: youtube
+            label: YouTube
+            type: string
+          - name: facebook
+            label: Facebook
+            type: string
