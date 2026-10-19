@@ -20,7 +20,7 @@ He believes good cancer care starts with listening. He takes time to explain eac
 1. **MBBS**, 2009 to 2014: Al-Ameen Medical College, Vijayapura (Rajiv Gandhi University of Health Sciences)
 2. **DNB, General Surgery**, 2016 to 2019: Rajarshi Chhatrapati Shahu Maharaj Government Medical College and CPR Hospital, Kolhapur
 3. **MCh, Surgical Oncology**, 2020 to 2023: Acharya Harihar Post Graduate Institute of Cancer, Cuttack, Odisha. **Gold medalist.**
-4. **FMASO, Fellowship in Minimal Access Surgical Oncology** (robotic and laparoscopic), 2024 to 2025: Rajiv Gandhi University of Health Sciences
+4. **FMASO: Fellowship in Robotic and Laparoscopic Surgical Oncology**, 2024 to 2025: Rajiv Gandhi University of Health Sciences
 
 ## Current position
 
