@@ -30,7 +30,7 @@ Attending Consultant, Department of Surgical Oncology, KIMS-MACS Hospital, Mahad
 
 - [Upper GI cancers](/specialties/upper-gi/)
 - [Breast cancer](/specialties/breast/)
-- [Colorectal cancer](/specialties/colorectal/)
+- [Colorectal cancer](/specialties/colorectal/), including sphincter-sparing surgery for rectal cancer
 - [Gynaecological cancers, including HIPEC](/specialties/gynecological-hipec/)
 - [Head and neck cancer](/specialties/head-and-neck/): robotic thyroidectomy and robotic neck dissection ([RIA-MIND](/robotic-surgery/ria-mind/))
 - [Pancreato-biliary cancer](/specialties/pancreato-biliary/)

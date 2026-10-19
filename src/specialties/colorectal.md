@@ -1,7 +1,7 @@
 ---
 title: Colorectal cancers
-description: "Colon and rectal cancer explained: warning signs, tests, robotic and keyhole surgery, and life after treatment, in Bengaluru."
-summary: Cancers of the colon and rectum. Bleeding from the back passage is often blamed on piles, which delays diagnosis.
+description: "Colon and rectal cancer explained: warning signs, tests, sphincter-sparing, robotic and keyhole surgery, and life after treatment, in Bengaluru."
+summary: Cancers of the colon and rectum, including sphincter-sparing surgery that avoids a permanent stoma bag wherever it is safe.
 order: 3
 faqs:
   - question: I have blood in my stool. Is it just piles?
@@ -35,6 +35,18 @@ The colon (large bowel) and rectum (the last part of the bowel) absorb water and
 
 - **Colon cancer** is usually treated with surgery to remove the affected part of the bowel and its lymph nodes. Some patients also need chemotherapy afterwards.
 - **Rectal cancer** often starts with radiotherapy and chemotherapy to shrink the tumour, followed by surgery. Whenever it is safe, the surgery keeps the anal sphincter so that you can pass stools normally.
+
+### Sphincter-sparing surgery for rectal cancer
+
+The anal sphincter is the ring of muscle that controls when you pass stools. In the past, many rectal cancers close to the anus were treated by removing the sphincter, which meant a permanent stoma bag on the abdomen.
+
+Today, most patients can keep their sphincter. Depending on how close the tumour is to the anus, the operation may be:
+
+- a **low anterior resection**, which removes the affected part of the rectum and joins the bowel back together
+- an **ultra-low anterior resection**, for tumours lower down
+- an **intersphincteric resection**, for tumours very close to the anus, which removes only the inner layer of the sphincter muscle
+
+A temporary stoma is often made to protect the join while it heals, and it is closed a few months later. A permanent stoma is needed only when keeping the sphincter would not remove the cancer safely or would leave poor control.
 
 ### Robotic and keyhole surgery
 
