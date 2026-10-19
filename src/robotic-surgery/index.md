@@ -32,6 +32,7 @@ Removing the cancer completely always comes first. A robotic operation is chosen
 
 - [Rectal and colon cancers](/specialties/colorectal/), where the narrow pelvis makes precision especially valuable
 - [Uterine and other gynaecological cancers](/specialties/gynecological-hipec/)
+- [Breast cancer](/specialties/breast/), in selected cases, through small cuts hidden in the armpit
 - [Oesophagus and stomach cancers](/specialties/upper-gi/), in selected patients
 - [Head and neck cancers](/specialties/head-and-neck/), using approaches that keep scars off the neck and face
 

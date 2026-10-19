@@ -1,6 +1,6 @@
 ---
 title: Breast cancer
-description: "Breast cancer explained: warning signs, screening, tests and surgery options, including breast-conserving surgery, in Bengaluru."
+description: "Breast cancer explained: warning signs, screening, tests and surgery options, including breast-conserving, endoscopic and robotic surgery, in Bengaluru."
 summary: The most common cancer in women in India. Found early, it is very treatable, and many women can keep their breast.
 order: 2
 faqs:
@@ -46,6 +46,10 @@ Treatment is planned around the type and stage of the cancer. It usually combine
 - **Sentinel lymph node biopsy**, which checks the first few lymph nodes in the armpit so that the rest can be left alone when they are clear
 - **Chemotherapy, hormone therapy and targeted therapy**, before or after surgery
 - **Radiotherapy**, usually after breast-conserving surgery
+
+### Endoscopic and robotic breast surgery
+
+In selected cases, breast cancer surgery can be done endoscopically or robotically. The operation is done through small cuts placed away from the breast, often in the armpit, where the scars are hidden. It can be used for nipple-sparing mastectomy with immediate breast reconstruction, and for removing lymph nodes from the armpit. Whether it suits you depends on the size and position of the tumour and on your breast size. Dr. Suraga will advise you.
 
 ## Recovery
 
