@@ -1,0 +1,11 @@
+{%- if parent %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    {%- if parent.url != "/" %}
+    <li><a href="{{ parent.url }}">{{ parent.title }}</a></li>
+    {%- endif %}
+    <li><span aria-current="page">{{ breadcrumbTitle or title }}</span></li>
+  </ol>
+</nav>
+{%- endif %}

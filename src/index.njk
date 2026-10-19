@@ -39,11 +39,11 @@ permalink: /
       <p>Each page explains the condition in plain language: warning signs, tests, treatment options and what recovery looks like.</p>
     </div>
     <ul class="treat-list">
-      {%- for item in specialties %}
+      {%- for item in collections.specialties %}
       <li>
-        <a href="/specialties/{{ item.slug }}/">
-          <span class="treat-name">{{ item.name }}</span>
-          <span class="treat-summary">{{ item.summary }}</span>
+        <a href="{{ item.url }}">
+          <span class="treat-name">{{ item.data.title }}</span>
+          <span class="treat-summary">{{ item.data.summary }}</span>
         </a>
       </li>
       {%- endfor %}
@@ -56,8 +56,8 @@ permalink: /
     <div class="robotic-text">
       <h2 id="robotic-heading">Neck surgery without a scar on the neck</h2>
       <p>Cancers of the mouth, throat and salivary glands often need lymph nodes removed from the neck. The usual operation leaves a long scar across the neck that is visible every day.</p>
-      <p><strong>RIA-MIND</strong> (Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection) is a technique Dr. Suraga developed and published. The robot works through a small cut below the collarbone, where clothing covers it.</p>
-      <p><strong>PRIA</strong> applies the same scar-conscious thinking to robotic parotidectomy, the removal of a parotid salivary gland.</p>
+      <p><strong>RIA-MIND</strong> (Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection) avoids that scar. The robot works through small cuts below the collarbone, where clothing covers them. Dr. Suraga is a co-author of the 2026 study reporting results of RIA-MIND in 62 patients.</p>
+      <p><strong>PRIA</strong> (Parotidectomy by Robotic Infraclavicular Approach) uses the same route below the collarbone to remove tumours of the parotid salivary gland.</p>
       <div class="button-row">
         <a class="btn btn-secondary" href="/robotic-surgery/">How robotic surgery works</a>
       </div>
@@ -66,7 +66,7 @@ permalink: /
     <figure class="incision-figure">
       <svg viewBox="0 0 320 300" role="img" aria-labelledby="incision-title incision-desc">
         <title id="incision-title">Where the incision is made</title>
-        <desc id="incision-desc">Outline of the head, neck and shoulders. A long dashed line on the side of the neck shows the usual neck dissection incision. A short solid blue line below the collarbone shows the RIA-MIND incision.</desc>
+        <desc id="incision-desc">Outline of the head, neck and shoulders. A long dashed line on the side of the neck shows the usual neck dissection incision. Small blue marks below the collarbone show the small RIA-MIND incisions.</desc>
         <g class="fig-body">
           <ellipse cx="160" cy="72" rx="44" ry="54"/>
           <path d="M136 120 L132 170 M184 120 L188 170"/>
@@ -74,11 +74,11 @@ permalink: /
           <path class="fig-clavicle" d="M152 194 C124 198 94 190 60 202 M168 194 C196 198 226 190 260 202"/>
         </g>
         <path class="fig-usual" d="M110 100 C114 138 128 166 156 184"/>
-        <path class="fig-riamind" d="M76 222 L114 217"/>
+        <path class="fig-riamind" d="M64 226 l10 -1 M90 224 l10 -1 M116 222 l10 -1 M142 222 l10 -1"/>
       </svg>
       <figcaption>
         <span class="legend-item"><span class="legend-swatch legend-usual"></span>Usual neck dissection incision</span>
-        <span class="legend-item"><span class="legend-swatch legend-riamind"></span>RIA-MIND incision, below the collarbone</span>
+        <span class="legend-item"><span class="legend-swatch legend-riamind"></span>RIA-MIND: small incisions below the collarbone</span>
         <span class="figure-note">Simplified illustration. Incision placement is planned for each patient.</span>
       </figcaption>
     </figure>

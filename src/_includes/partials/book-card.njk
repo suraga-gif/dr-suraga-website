@@ -1,0 +1,11 @@
+{% from "partials/icons.njk" import icon %}
+<div class="book-card">
+  <h2>Book a consultation</h2>
+  <p>{{ site.hospital }}, {{ site.area }}</p>
+  <p class="book-card-hours">{{ icon("clock") }}{{ site.hours }}</p>
+  <div class="book-card-actions">
+    <a class="btn btn-primary" href="/appointment/">Book appointment</a>
+    <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
+    <a class="btn btn-secondary" href="{{ site.phone | telLink }}">{{ icon("phone") }}Call {{ site.phoneDisplay }}</a>
+  </div>
+</div>

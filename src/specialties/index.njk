@@ -1,0 +1,20 @@
+---
+title: Cancers treated
+description: Cancers treated by Dr. Suraga Belakawadi in Bengaluru, explained in plain language, with robotic and keyhole surgery options.
+summary: Choose a cancer to read about its warning signs, the tests used to diagnose it, the treatment options and what recovery involves.
+permalink: /specialties/
+parent: { title: Home, url: / }
+reviewPending: false
+---
+<ul class="treat-list treat-list-page">
+  {%- for item in collections.specialties %}
+  <li>
+    <a href="{{ item.url }}">
+      <span class="treat-name">{{ item.data.title }}</span>
+      <span class="treat-summary">{{ item.data.summary }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+
+<p>Not sure which applies to you? Book a consultation and bring any scans or reports you have. Dr. Suraga will explain what they mean and what happens next.</p>

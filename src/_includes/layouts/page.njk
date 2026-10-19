@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+---
+{#- Standard content page: title, optional summary, Markdown body, optional FAQs, booking card -#}
+<article class="page">
+  <header class="page-header">
+    <div class="container{% if headerPhoto %} page-header-with-photo{% endif %}">
+      <div>
+        {% include "partials/breadcrumbs.njk" %}
+        <h1>{{ title }}</h1>
+        {%- if summary %}
+        <p class="page-lede">{{ summary }}</p>
+        {%- endif %}
+      </div>
+      {%- if headerPhoto %}
+      <div class="page-header-photo">
+        <img src="{{ headerPhoto }}" alt="{{ headerPhotoAlt }}" sizes="(min-width: 60em) 24rem, 100vw" loading="eager">
+      </div>
+      {%- endif %}
+    </div>
+  </header>
+
+  <div class="container page-body">
+    <div class="page-main">
+      {%- if reviewPending %}{% include "partials/draft-note.njk" %}{% endif %}
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+
+      {%- if faqs and faqs.length %}
+      <section class="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Common questions</h2>
+        {%- for item in faqs %}
+        <details>
+          <summary>{{ item.question }}</summary>
+          <div class="faq-answer">{{ item.answer | markdown | safe }}</div>
+        </details>
+        {%- endfor %}
+      </section>
+      {%- endif %}
+
+      {%- if sources and sources.length %}
+      <section class="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">References</h2>
+        <ol>
+          {%- for s in sources %}
+          <li>{{ s.citation }}{% if s.url %} <a href="{{ s.url }}" rel="noopener">{{ s.linkText or "Read the paper" }}</a>{% endif %}</li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endif %}
+
+      {%- if "/specialties/" in page.url and page.url != "/specialties/" %}
+      <nav class="related-list" aria-labelledby="other-heading">
+        <h2 id="other-heading">Other cancers Dr. Suraga treats</h2>
+        <ul>
+          {%- for item in collections.specialties %}{% if item.url != page.url %}
+          <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+          {%- endif %}{% endfor %}
+        </ul>
+      </nav>
+      {%- endif %}
+    </div>
+
+    <aside class="page-aside">
+      {% include "partials/book-card.njk" %}
+    </aside>
+  </div>
+</article>
