@@ -33,8 +33,8 @@ Please remove identifying details, or share them only with the patient's consent
 - Colorectal cancer, including sphincter-preserving surgery for rectal cancer
 - Gynaecological cancers, including cytoreductive surgery and HIPEC
 - Pancreato-biliary cancers
-- Head and neck cancers, including robotic scar-sparing neck dissection ([RIA-MIND](/robotic-surgery/ria-mind/)) and parotidectomy ([PRIA](/robotic-surgery/pria/))
-- Soft tissue sarcomas
+- Head and neck cancers, including robotic thyroidectomy, robotic scar-sparing neck dissection ([RIA-MIND](/robotic-surgery/ria-mind/)) and parotidectomy ([PRIA](/robotic-surgery/pria/))
+- Soft tissue sarcomas and skin cancers
 - Second opinions on surgical options
 
 ## Keeping you informed
