@@ -6,7 +6,7 @@
   {%- set pageTitle = (title + " | " + site.name) if title else (site.name + " | " + site.title + ", Bengaluru") %}
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ description or ('Robotic and laparoscopic cancer surgery in Bengaluru by ' + site.name + ', ' + site.position + ' at ' + site.hospital + '.') }}">
-  {%- if not site.launched %}
+  {%- if not site.launched or noindex %}
   <meta name="robots" content="noindex, nofollow">
   {%- endif %}
   <meta name="theme-color" content="#185FA5">

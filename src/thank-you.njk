@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Request received
+permalink: /thank-you/
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% from "partials/icons.njk" import icon %}
+<section class="section">
+  <div class="container prose">
+    <h1>Thank you. Your request has been sent.</h1>
+    <p>The clinic will call you on the number you gave to confirm the date and time of your appointment. Clinic hours are {{ site.hours | lower }}.</p>
+    <p>If your appointment is urgent, or you haven’t heard back within one working day, please call or send a WhatsApp message.</p>
+    <div class="button-row">
+      <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
+      <a class="btn btn-secondary" href="{{ site.phone | telLink }}">{{ icon("phone") }}Call {{ site.phoneDisplay }}</a>
+      <a class="btn btn-secondary" href="/">Back to home page</a>
+    </div>
+    <p class="form-note">In a medical emergency, go to the nearest hospital emergency department.</p>
+  </div>
+</section>

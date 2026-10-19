@@ -1,0 +1,151 @@
+---
+layout: layouts/base.njk
+title: Book an appointment
+description: Request an appointment with Dr. Suraga Belakawadi, robotic and laparoscopic surgical oncologist at KIMS-MACS Hospital, Mahadevpura, Bengaluru. Clinic Monday to Saturday, 9 am to 3 pm.
+permalink: /appointment/
+---
+{% from "partials/icons.njk" import icon %}
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><span aria-current="page">Book an appointment</span></li>
+      </ol>
+    </nav>
+    <h1>Book an appointment</h1>
+    <p class="page-lede">Send a request and the clinic will call you to confirm the date and time. For a quicker reply, call or send a WhatsApp message.</p>
+  </div>
+</section>
+
+<div class="container appointment-grid">
+  <section class="booking" aria-labelledby="form-heading">
+    <h2 id="form-heading">Appointment request</h2>
+    <p class="form-intro">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+    <div class="form-errors" role="alert" tabindex="-1" hidden>
+      <p><strong>Please check the form.</strong></p>
+      <ul></ul>
+    </div>
+
+    <form class="booking-form" action="https://formspree.io/f/mvzdnwgj" method="POST" novalidate data-thanks-url="/thank-you/" data-phone="{{ site.phone }}" data-phone-display="{{ site.phoneDisplay }}">
+      <input type="hidden" name="_subject" value="New appointment request from drsuraga.com">
+      <div class="honeypot" aria-hidden="true">
+        <label for="f-gotcha">Leave this field empty</label>
+        <input type="text" id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required data-error="Enter the patient’s full name">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f-phone">Mobile number <span class="req" aria-hidden="true">*</span></label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" required
+            pattern="^(\+?91[\s-]?)?0?[6-9]\d{4}[\s-]?\d{5}$" aria-describedby="f-phone-hint"
+            data-error="Enter a 10-digit Indian mobile number, for example 98450 12345">
+          <p class="hint" id="f-phone-hint">The clinic will call this number to confirm.</p>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="optional">(optional)</span></label>
+          <input type="email" id="f-email" name="email" autocomplete="email" data-error="Enter an email address like name@example.com, or leave it empty">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field field-short">
+          <label for="f-age">Patient’s age</label>
+          <input type="number" id="f-age" name="age" min="0" max="120" inputmode="numeric" data-error="Enter an age between 0 and 120">
+        </div>
+        <fieldset class="field">
+          <legend>Type of visit</legend>
+          <div class="choices">
+            <label><input type="radio" name="visit_type" value="New patient" checked> New patient</label>
+            <label><input type="radio" name="visit_type" value="Follow-up"> Follow-up</label>
+            <label><input type="radio" name="visit_type" value="Second opinion"> Second opinion</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <label for="f-concern">Area of concern</label>
+        <select id="f-concern" name="concern">
+          <option value="Not sure">Not sure</option>
+          {%- for item in collections.specialties %}
+          <option value="{{ item.data.title }}">{{ item.data.title }}</option>
+          {%- endfor %}
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f-date">Preferred date</label>
+          <input type="date" id="f-date" name="preferred_date" aria-describedby="f-date-hint" data-error="Choose a date from today onwards">
+          <p class="hint" id="f-date-hint">The clinic is open Monday to Saturday.</p>
+        </div>
+        <div class="field">
+          <label for="f-time">Preferred time</label>
+          <select id="f-time" name="preferred_time">
+            <option value="Any time">Any time</option>
+            <option value="9 am to 11 am">9 am to 11 am</option>
+            <option value="11 am to 1 pm">11 am to 1 pm</option>
+            <option value="1 pm to 3 pm">1 pm to 3 pm</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-message">Anything you’d like the doctor to know <span class="optional">(optional)</span></label>
+        <textarea id="f-message" name="message" rows="4" maxlength="500" aria-describedby="f-message-hint"></textarea>
+        <p class="hint" id="f-message-hint">A line or two is enough. Please don’t include detailed medical records here. Bring your reports to the visit instead.</p>
+      </div>
+
+      <div class="field field-check">
+        <label>
+          <input type="checkbox" name="consent" value="Yes" required data-error="Tick the box to agree to be contacted">
+          <span>I agree to be contacted by phone, WhatsApp or email about this appointment, and I have read the <a href="/privacy-policy/">privacy policy</a>. <span class="req" aria-hidden="true">*</span></span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-submit">Send request</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <aside class="contact-panel" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact the clinic</h2>
+    <div class="contact-actions">
+      <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
+      <a class="btn btn-secondary" href="{{ site.phone | telLink }}">{{ icon("phone") }}Call {{ site.phoneDisplay }}</a>
+    </div>
+    <dl class="visit-list">
+      <div><dt>{{ icon("clock") }}Clinic hours</dt><dd>{{ site.hours }}</dd></div>
+      <div><dt>{{ icon("pin") }}Hospital</dt><dd>{{ site.hospital }}<br>{{ site.address }}</dd></div>
+      <div><dt>{{ icon("mail") }}Email</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+    </dl>
+
+    <div class="map" data-map-src="https://www.google.com/maps?q={{ ('KIMS Hospitals, ' + site.address) | urlencode }}&output=embed">
+      <div class="map-placeholder">
+        <p>The map is loaded from Google Maps only when you choose to see it.</p>
+        <div class="button-row">
+          <button type="button" class="btn btn-secondary map-load">{{ icon("pin") }}Show map</button>
+          <a class="btn btn-secondary" href="{{ site.mapUrl }}" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <h3>What to bring to your first visit</h3>
+    <ul class="bring-list">
+      <li>All scan reports and the images (CD or online link) from CT, MRI, PET-CT or ultrasound</li>
+      <li>Biopsy, FNAC or histopathology reports, and slides or blocks if you have them</li>
+      <li>Blood test reports from the last month</li>
+      <li>Details of any surgery, chemotherapy or radiotherapy already given</li>
+      <li>A list of your current medicines</li>
+    </ul>
+  </aside>
+</div>
+
+<script src="/assets/js/booking-form.js" defer></script>
