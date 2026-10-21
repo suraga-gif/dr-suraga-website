@@ -65,6 +65,15 @@ Click **Contact details and settings**. There you can:
 | Your biography, training and interests | **About page** |
 | Information for referring doctors | **For doctors page** |
 
+## Share an article on Google and Instagram
+
+After publishing a blog post, open **your website address + /share/** (for example drsuraga.com/share/). Each article has:
+
+- **Copy Google update text** and **Copy article link**, for an update on your Google Business Profile
+- **Copy Instagram caption**, for @onco_outreach
+
+The page also has step-by-step instructions for posting the Google update.
+
 ## Good practice
 
 - **Never** put patient names, photos or identifiable details on the website.

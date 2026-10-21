@@ -1,0 +1,85 @@
+---
+# Dr. Suraga's share kit: ready-to-paste text for Google Business Profile updates and Instagram.
+# Hidden from search engines and left out of the sitemap.
+layout: layouts/base.njk
+title: Share kit
+permalink: /share/
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% from "partials/icons.njk" import icon %}
+<section class="page-header">
+  <div class="container">
+    <h1>Share kit</h1>
+    <p class="page-lede">Ready-to-paste text for each article, for your Google Business Profile updates and Instagram. Newest articles are at the top.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container share-list">
+    <details class="share-help">
+      <summary>How to post an article as a Google update</summary>
+      <ol>
+        <li>Below, find the article and tap <strong>Copy Google update text</strong>.</li>
+        <li>Open the <strong>Google Maps</strong> app, tap your profile picture, then <strong>Your business profile</strong>.</li>
+        <li>Tap <strong>Add update</strong> (it may be under <strong>Promote</strong>), then paste the text.</li>
+        <li>Add a photo: the article’s cover image, or any suitable photo. Never a patient.</li>
+        <li>Under <strong>Add a button</strong>, choose <strong>Learn more</strong>. Tap <strong>Copy article link</strong> below and paste it there.</li>
+        <li>Tap <strong>Post</strong>.</li>
+      </ol>
+    </details>
+
+    {%- for post in collections.posts %}
+    {%- set postUrl = site.url + post.url %}
+    {%- set googleText -%}
+{{ post.data.title }}
+
+{{ post.data.summary }}
+{%- if post.data.takeaways and post.data.takeaways.length %}
+
+Key points:
+{%- for point in post.data.takeaways %}
+• {{ point }}
+{%- endfor %}
+{%- endif %}
+
+Read the full article on the website.
+    {%- endset %}
+    {%- set instaText -%}
+{{ post.data.title }}
+{%- if post.data.takeaways and post.data.takeaways.length %}
+{% for point in post.data.takeaways %}
+✅ {{ point }}
+{%- endfor %}
+{%- endif %}
+
+Read more: link in bio
+#cancerawareness #onco_outreach #bengaluru
+    {%- endset %}
+    <article class="share-card">
+      <p class="post-card-meta">{{ post.data.category }} · {{ post.date | readableDate }}</p>
+      <h2>{{ post.data.title }}</h2>
+
+      <label class="share-label" for="g-{{ loop.index }}">Google update text <span class="share-count">({{ googleText | trim | length }} of 1,500 characters)</span></label>
+      <textarea id="g-{{ loop.index }}" readonly rows="8">{{ googleText | trim }}</textarea>
+      <div class="button-row">
+        <button type="button" class="btn btn-primary" data-copy-link="{{ googleText | trim }}">Copy Google update text</button>
+        <button type="button" class="btn btn-secondary" data-copy-link="{{ postUrl }}">Copy article link</button>
+        {%- if post.data.cover %}
+        <a class="btn btn-secondary" href="{{ post.data.cover }}" download>Download cover image</a>
+        {%- endif %}
+      </div>
+
+      <details class="share-insta">
+        <summary>{{ icon("instagram") }}Instagram caption</summary>
+        <textarea readonly rows="8" aria-label="Instagram caption for {{ post.data.title }}">{{ instaText | trim }}</textarea>
+        <div class="button-row">
+          <button type="button" class="btn btn-secondary" data-copy-link="{{ instaText | trim }}">Copy Instagram caption</button>
+        </div>
+      </details>
+    </article>
+    {%- else %}
+    <p>No articles yet. Publish one in the editor and it will appear here within a few minutes.</p>
+    {%- endfor %}
+  </div>
+</section>

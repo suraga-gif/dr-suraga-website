@@ -548,3 +548,18 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 /* Hospital logo (home "Visit the clinic", appointment page, footer) */
 .hospital-logo { width: 100%; max-width: 220px; height: auto; margin-bottom: 1.25rem; border-radius: var(--radius); background: #fff; }
 .site-footer .hospital-logo { max-width: 180px; margin: 1rem 0 0; }
+
+/* Share kit page */
+.share-list { display: grid; gap: 1.5rem; max-width: 46rem; }
+.share-help { padding: 1rem 1.25rem; background: var(--blue-wash); border-radius: var(--radius); }
+.share-help summary, .share-insta summary { cursor: pointer; font-family: var(--font-head); font-weight: 600; }
+.share-help ol { margin: 0.75rem 0 0; padding-left: 1.25em; font-size: 1rem; }
+.share-card { padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.share-card h2 { font-size: 1.25rem; margin-bottom: 1rem; }
+.share-label { display: block; margin-bottom: 0.4rem; font-family: var(--font-head); font-weight: 500; }
+.share-count { font-weight: 400; color: var(--ink-soft); font-size: var(--small); }
+.share-card textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); font-family: var(--font-body); font-size: 0.9375rem; line-height: 1.5; resize: vertical; }
+.share-insta { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.share-insta summary { display: flex; align-items: center; gap: 0.5rem; }
+.share-insta summary .icon { width: 1.1rem; height: 1.1rem; color: var(--blue); }
+.share-insta textarea { margin-top: 0.75rem; }
