@@ -52,7 +52,7 @@ permalink: /
 </section>
 
 <section class="section section-wash" aria-labelledby="robotic-heading">
-  <div class="container robotic-grid">
+  <div class="container">
     <div class="robotic-text">
       <h2 id="robotic-heading">{{ home.roboticHeading }}</h2>
       {{ home.roboticText | markdown | safe }}
@@ -60,26 +60,6 @@ permalink: /
         <a class="btn btn-secondary" href="/robotic-surgery/">How robotic surgery works</a>
       </div>
     </div>
-
-    <figure class="incision-figure">
-      <svg viewBox="0 0 320 300" role="img" aria-labelledby="incision-title incision-desc">
-        <title id="incision-title">Where the incision is made</title>
-        <desc id="incision-desc">Outline of the head, neck and shoulders. A long dashed line on the side of the neck shows the usual neck dissection incision. Small blue marks below the collarbone show the small RIA-MIND incisions.</desc>
-        <g class="fig-body">
-          <ellipse cx="160" cy="72" rx="44" ry="54"/>
-          <path d="M136 120 L132 170 M184 120 L188 170"/>
-          <path d="M132 170 C108 180 62 184 30 208 L18 300 M188 170 C212 180 258 184 290 208 L302 300"/>
-          <path class="fig-clavicle" d="M152 194 C124 198 94 190 60 202 M168 194 C196 198 226 190 260 202"/>
-        </g>
-        <path class="fig-usual" d="M110 100 C114 138 128 166 156 184"/>
-        <path class="fig-riamind" d="M64 226 l10 -1 M90 224 l10 -1 M116 222 l10 -1 M142 222 l10 -1"/>
-      </svg>
-      <figcaption>
-        <span class="legend-item"><span class="legend-swatch legend-usual"></span>Usual neck dissection incision</span>
-        <span class="legend-item"><span class="legend-swatch legend-riamind"></span>RIA-MIND: small incisions below the collarbone</span>
-        <span class="figure-note">Simplified illustration. Incision placement is planned for each patient.</span>
-      </figcaption>
-    </figure>
   </div>
 </section>
 

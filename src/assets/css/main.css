@@ -220,26 +220,7 @@ strong { font-weight: 600; }
 }
 
 /* Robotic surgery feature */
-.robotic-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
-.robotic-text { max-width: 38rem; }
-.incision-figure {
-  margin: 0; padding: 1.5rem;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-}
-.incision-figure svg { width: 100%; max-width: 340px; margin-inline: auto; }
-.fig-body { fill: none; stroke: #6B7684; stroke-width: 2; stroke-linecap: round; }
-.fig-body ellipse { stroke-width: 2; }
-.fig-clavicle { stroke-width: 2.5; }
-.fig-usual { fill: none; stroke: #8A94A3; stroke-width: 3; stroke-dasharray: 7 6; stroke-linecap: round; }
-.fig-riamind { fill: none; stroke: var(--blue); stroke-width: 6; stroke-linecap: round; }
-.incision-figure figcaption { display: grid; gap: 0.6rem; margin-top: 1.25rem; font-family: var(--font-head); font-size: var(--small); line-height: 1.4; }
-.legend-item { display: flex; align-items: center; gap: 0.75rem; }
-.legend-swatch { width: 32px; flex-shrink: 0; border-top: 3px dashed #8A94A3; }
-.legend-riamind { border-top: 5px dashed var(--blue); }
-.figure-note { font-family: var(--font-body); font-style: italic; font-size: 0.875rem; color: var(--ink-soft); }
-@media (min-width: 60em) {
-  .robotic-grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 4rem; align-items: center; }
-}
+.robotic-text { max-width: 44rem; }
 
 /* About */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
