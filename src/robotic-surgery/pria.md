@@ -1,5 +1,6 @@
 ---
 title: "PRIA: robotic parotid surgery without a face or neck scar"
+seoTitle: PRIA Robotic Parotid Surgery Without a Face or Neck Scar
 breadcrumbTitle: PRIA
 description: PRIA (Parotidectomy by Robotic Infraclavicular Approach) explained for patients and referring doctors.
 summary: Parotidectomy by Robotic Infraclavicular Approach. Tumours of the parotid salivary gland are removed through small cuts below the collarbone instead of a cut in front of the ear and down the neck.

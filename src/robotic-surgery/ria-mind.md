@@ -1,5 +1,6 @@
 ---
 title: "RIA-MIND: robotic neck dissection without a neck scar"
+seoTitle: RIA-MIND Robotic Neck Dissection Without a Neck Scar
 breadcrumbTitle: RIA-MIND
 description: RIA-MIND (Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection) explained for patients and referring doctors, with published results.
 summary: Robotic Infraclavicular Approach for Minimally Invasive Neck Dissection. Lymph nodes in the neck are removed through small cuts below the collarbone instead of a long cut across the neck.

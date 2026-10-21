@@ -1,0 +1,13 @@
+{#- Structured data (JSON-LD) that helps Google understand who the doctor is and what each page contains -#}
+{%- set schemaContext = {
+  title: title,
+  summary: summary,
+  url: page.url,
+  date: page.date,
+  parent: parent,
+  breadcrumbTitle: breadcrumbTitle,
+  faqs: faqs,
+  isPost: isPost,
+  image: shareImage
+} %}
+<script type="application/ld+json">{{ schemaContext | schemaGraph(site, collections.specialties) | safe }}</script>

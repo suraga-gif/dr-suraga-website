@@ -1,5 +1,6 @@
 ---
 title: Head and neck cancers
+seoTitle: Head and Neck Cancer Surgery in Bengaluru
 description: "Mouth, throat, thyroid and salivary gland cancers explained: warning signs, tobacco risk, surgery, robotic thyroidectomy and scar-sparing robotic neck dissection (RIA-MIND), in Bengaluru."
 summary: Cancers of the mouth, throat, voice box, thyroid and salivary glands. Mouth cancer is one of the most common cancers in India, and most cases are linked to tobacco.
 order: 6

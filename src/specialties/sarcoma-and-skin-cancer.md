@@ -1,5 +1,6 @@
 ---
 title: Soft tissue sarcomas and skin cancers
+seoTitle: Sarcoma and Skin Cancer Surgery in Bengaluru
 description: "Soft tissue sarcoma and skin cancer (melanoma and other skin cancers) explained: which lumps and moles need checking, planned biopsy, and surgery, in Bengaluru."
 summary: Sarcomas are rare cancers of fat, muscle and other connective tissue. Skin cancers include melanoma and the more common non-melanoma types. For both, the first operation matters most.
 order: 7

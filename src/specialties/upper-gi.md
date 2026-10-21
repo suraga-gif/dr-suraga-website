@@ -1,5 +1,6 @@
 ---
 title: Upper GI cancers
+seoTitle: Upper GI Cancer Surgery in Bengaluru
 description: "Cancer of the oesophagus (food pipe) and stomach explained: warning signs, tests and treatment, including keyhole and robotic surgery, in Bengaluru."
 summary: Cancers of the oesophagus (food pipe) and stomach. They are often found late because early symptoms feel like ordinary acidity.
 order: 1

@@ -1,5 +1,6 @@
 ---
 title: Breast cancer
+seoTitle: Breast Cancer Surgery in Bengaluru
 description: "Breast cancer explained: warning signs, screening, tests and surgery options, including breast-conserving, endoscopic and robotic surgery, in Bengaluru."
 summary: The most common cancer in women in India. Found early, it is very treatable, and many women can keep their breast.
 order: 2

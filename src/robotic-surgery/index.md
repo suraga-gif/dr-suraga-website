@@ -1,5 +1,6 @@
 ---
 title: Robotic surgery
+seoTitle: Robotic Cancer Surgery in Bengaluru
 description: How robotic cancer surgery works, who it helps, and scar-sparing robotic neck and parotid surgery (RIA-MIND and PRIA) in Bengaluru.
 summary: Robotic surgery lets the surgeon operate through small cuts with a magnified 3D view and instruments that bend like a wrist. The surgeon controls every movement.
 permalink: /robotic-surgery/

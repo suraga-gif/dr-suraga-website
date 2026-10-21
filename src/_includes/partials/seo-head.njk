@@ -1,0 +1,25 @@
+{#- Search engine and social sharing tags for every page -#}
+{%- set pageTitle = ((seoTitle or title) + " | " + site.name) if (seoTitle or title) else (site.name + " | " + site.title + ", Bengaluru") %}
+{%- set pageDescription = description or summary or ("Robotic and laparoscopic cancer surgery in Bengaluru by " + site.name + ", " + site.position + " at " + site.hospital + ". Clinic Monday to Saturday, 9 am to 3 pm.") %}
+{%- set canonical = site.url + page.url %}
+
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}">
+<link rel="canonical" href="{{ canonical }}">
+{%- if not site.launched or noindex %}
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
+
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="{{ 'article' if isPost else 'website' }}">
+<meta property="og:title" content="{{ seoTitle or title or site.name }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ shareImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ coverAlt if cover else (site.name + ', ' + site.title) }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}: articles" href="/feed.xml">

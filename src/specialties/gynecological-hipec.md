@@ -1,5 +1,6 @@
 ---
 title: Gynaecological cancers and HIPEC
+seoTitle: Gynaecological Cancer Surgery and HIPEC in Bengaluru
 breadcrumbTitle: Gynaecological cancers
 description: Ovarian, uterine and cervical cancer explained, including HIPEC (heated chemotherapy during surgery) and robotic surgery, in Bengaluru.
 summary: Cancers of the ovary, uterus and cervix. HIPEC, heated chemotherapy given during surgery, can help selected patients with ovarian cancer.

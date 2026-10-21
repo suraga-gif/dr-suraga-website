@@ -1,5 +1,6 @@
 ---
 title: Colorectal cancers
+seoTitle: Colorectal Cancer Surgery in Bengaluru
 description: "Colon and rectal cancer explained: warning signs, tests, sphincter-sparing, robotic and keyhole surgery, and life after treatment, in Bengaluru."
 summary: Cancers of the colon and rectum, including sphincter-sparing surgery that avoids a permanent stoma bag wherever it is safe.
 order: 3

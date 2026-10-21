@@ -1,6 +1,7 @@
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Image, { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import markdownIt from "markdown-it";
 import { videoInfo } from "./lib/video.js";
+import { schemaGraph } from "./lib/schema.js";
 
 // Font files are copied from the installed @fontsource packages, so no font binaries live in the repo
 const FONT_FILES = [
@@ -18,6 +19,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" }); // e.g. /admin opens the editor
+  eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" }); // caching and security headers
   // Files uploaded through the editor (images, PDFs). Images are also resized wherever a page shows them.
   eleventyConfig.addPassthroughCopy("src/uploads");
   for (const file of FONT_FILES) {
@@ -98,6 +100,28 @@ export default function (eleventyConfig) {
     String(authors)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/\b(Belakawadi S|Suraga B|Suraga Belakawadi|Belakawadi)\b/g, "<strong>$1</strong>")
+  );
+
+  // Share image for WhatsApp/LinkedIn previews: the given photo cropped to 1200x630.
+  // Falls back to the default card when there is no photo.
+  eleventyConfig.addAsyncFilter("ogImage", async (src) => {
+    if (!src || /^https?:/.test(src)) return src || "/assets/img/og-default.jpg";
+    const stats = await Image(`./src${src}`, {
+      widths: [1200],
+      formats: ["jpeg"],
+      outputDir: "./_site/img/og/",
+      urlPath: "/img/og/",
+      sharpJpegOptions: { quality: 80, mozjpeg: true },
+      transform: (sharp) => sharp.resize(1200, 630, { fit: "cover", position: "attention" }),
+    });
+    return stats.jpeg[0].url;
+  });
+
+  eleventyConfig.addFilter("schemaGraph", schemaGraph);
+
+  // Sitemap: every published page except those marked noindex
+  eleventyConfig.addFilter("sitemapPages", (pages = []) =>
+    pages.filter((p) => p.url && !p.data.noindex && !p.url.startsWith("/404") && p.outputPath?.endsWith(".html"))
   );
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());

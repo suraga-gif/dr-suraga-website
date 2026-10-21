@@ -2,6 +2,7 @@
 // A post marked "Hide from website" (draft) gets no page and is left out of every list.
 export default {
   layout: "layouts/post.njk",
+  isPost: true,
   parent: { title: "Blog", url: "/blog/" },
   eleventyComputed: {
     permalink: (data) => (data.draft ? false : `/blog/${data.page.fileSlug}/`),

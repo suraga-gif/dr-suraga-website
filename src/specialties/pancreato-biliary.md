@@ -1,5 +1,6 @@
 ---
 title: Pancreas, gallbladder and bile duct cancers
+seoTitle: Pancreas, Gallbladder and Bile Duct Cancer Surgery in Bengaluru
 breadcrumbTitle: Pancreato-biliary cancers
 description: "Cancer of the pancreas, gallbladder and bile ducts explained: jaundice and other warning signs, tests, Whipple surgery and recovery, in Bengaluru."
 summary: Cancers of the pancreas and the bile drainage system. Jaundice is often the first sign.
