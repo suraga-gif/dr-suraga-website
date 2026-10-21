@@ -16,7 +16,6 @@ takeaways:
   - Colorectal cancer found early has a high chance of cure.
 instagram: ""
 draft: false
-reviewPending: true
 ---
 
 Many people in India notice blood in their stool and assume it is piles. Often they are right: piles are very common and usually harmless. But colorectal (bowel) cancer can cause exactly the same bleeding. When the bleeding is treated with ointments for months without an examination, the cancer has time to grow.

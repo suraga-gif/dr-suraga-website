@@ -16,7 +16,6 @@ takeaways:
   - Mouth cancer found early is often curable with surgery alone.
 instagram: ""
 draft: false
-reviewPending: true
 ---
 
 Almost everyone gets mouth ulcers from time to time. A bite on the cheek, a sharp tooth, spicy food or stress can all cause one. These ulcers are painful but usually heal on their own within one to two weeks.
