@@ -2,8 +2,7 @@
   "url": "https://drsuraga.com",
   "launched": false,
   "reviewBanner": false,
-  "notice": "",
-
+  "notice": "Test message",
   "name": "Dr. Suraga Belakawadi",
   "shortName": "Dr. Suraga",
   "title": "Robotic & Laparoscopic Surgical Oncologist",
@@ -15,18 +14,14 @@
   "area": "Mahadevpura, Bengaluru",
   "address": "Survey No. 36/5, Outer Ring Road, Doddanekkundi, K.R. Puram, Mahadevpura, Bengaluru, Karnataka 560037",
   "mapUrl": "https://www.google.com/maps/search/?api=1&query=KIMS+Hospitals+Doddanekkundi+Outer+Ring+Road+Bengaluru+560037",
-
   "phone": "+917829245125",
   "phoneDisplay": "+91 78292 45125",
   "whatsapp": "917829245125",
   "whatsappMessage": "Hello Dr. Suraga, I would like to book an appointment.",
   "email": "suraga.b@gmail.com",
   "hours": "Monday to Saturday, 9:00 am to 3:00 pm",
-
   "social": {
     "instagram": "https://www.instagram.com/onco_outreach/",
-    "linkedin": "https://www.linkedin.com/in/suraga-b-4839b9282",
-    "youtube": "",
-    "facebook": ""
+    "linkedin": "https://www.linkedin.com/in/suraga-b-4839b9282"
   }
 }
