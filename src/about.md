@@ -2,13 +2,13 @@
 layout: layouts/page.njk
 title: About Dr. Suraga Belakawadi
 breadcrumbTitle: About
-description: Dr. Suraga Belakawadi, MCh Surgical Oncology (gold medal), robotic and laparoscopic surgical oncologist at KIMS-MACS Hospital, Mahadevpura, Bengaluru.
-summary: Robotic and laparoscopic surgical oncologist and Attending Consultant at KIMS-MACS Hospital, Mahadevpura, Bengaluru.
+description: Dr. Suraga Belakawadi, MCh Surgical Oncology (gold medal), robotic and laparoscopic surgical oncologist at KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru.
+summary: Robotic and laparoscopic surgical oncologist and Attending Consultant at KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru.
 permalink: /about/
 parent: { title: Home, url: / }
 reviewPending: false
-headerPhoto: /assets/photos/dr-suraga-white-coat.jpg
-headerPhotoAlt: Portrait of Dr. Suraga Belakawadi
+headerPhoto: /assets/photos/dr-suraga-clinic.jpg
+headerPhotoAlt: Dr. Suraga Belakawadi at his desk in the clinic
 ---
 
 Dr. Suraga Belakawadi is a surgical oncologist, a surgeon who specialises in removing cancer. His practice covers cancers of the oesophagus and stomach, breast, colon and rectum, the female reproductive organs, the pancreas and bile ducts, the head and neck including the thyroid, the skin, and soft tissue sarcomas. Wherever it is the right choice for the patient, he uses robotic and laparoscopic (keyhole) surgery.
@@ -24,7 +24,7 @@ He believes good cancer care starts with listening. He takes time to explain eac
 
 ## Current position
 
-Attending Consultant, Department of Surgical Oncology, KIMS-MACS Hospital, Mahadevpura, Bengaluru.
+Attending Consultant, Department of Surgical Oncology, KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru.
 
 ## Areas of special interest
 

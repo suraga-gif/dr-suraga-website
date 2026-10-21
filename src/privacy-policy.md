@@ -10,7 +10,7 @@ parent: { title: Home, url: / }
 
 This policy explains what personal information this website collects, why, and what you can do about it. It is written in line with India's Digital Personal Data Protection Act, 2023.
 
-**Who is responsible for your information:** Dr. Suraga Belakawadi, Surgical Oncologist, KIMS-MACS Hospital, Mahadevpura, Bengaluru. Contact: [suraga.b@gmail.com](mailto:suraga.b@gmail.com).
+**Who is responsible for your information:** Dr. Suraga Belakawadi, Surgical Oncologist, KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru. Contact: [suraga.b@gmail.com](mailto:suraga.b@gmail.com).
 
 ## What we collect
 

@@ -179,7 +179,7 @@ strong { font-weight: 600; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 .hero-photo img {
   width: 100%; height: clamp(300px, 50vh, 460px);
-  object-fit: cover; object-position: 50% 32%;
+  object-fit: cover; object-position: 50% 20%;
   border-radius: var(--radius);
   background: #E4E7EA;
 }
@@ -204,7 +204,7 @@ strong { font-weight: 600; }
   .hero { padding-top: 3.5rem; }
   .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 4rem; align-items: center; }
   .hero-photo { order: 2; }
-  .hero-photo img { height: clamp(520px, 72vh, 680px); object-position: 50% 30%; }
+  .hero-photo img { height: clamp(520px, 72vh, 680px); object-position: 50% 15%; }
   .nameplate-degrees { font-size: 1.0625rem; }
 }
 
@@ -225,7 +225,7 @@ strong { font-weight: 600; }
 /* About */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 .about-photo { max-width: 24rem; }
-.about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: var(--radius); }
+.about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--radius); }
 .about-text { max-width: 38rem; }
 @media (min-width: 48em) {
   .about-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 3.5rem; align-items: center; }
@@ -304,7 +304,7 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 .page-lede { font-size: 1.1875rem; color: var(--ink-soft); max-width: 38rem; }
 .page-header-with-photo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
 .page-header-photo { max-width: 20rem; }
-.page-header-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: var(--radius); }
+.page-header-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--radius); }
 @media (min-width: 48em) {
   .page-header { padding-block: 2.5rem 3rem; }
   .page-header-with-photo { grid-template-columns: minmax(0, 1fr) 16rem; gap: 3rem; align-items: center; }
@@ -547,3 +547,7 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 .bring-list li { margin-bottom: 0.4em; }
 .bring-list li::marker { color: var(--blue); }
 .form-note { font-size: var(--small); color: var(--ink-soft); margin-top: 2rem; }
+
+/* Hospital logo (home "Visit the clinic", appointment page, footer) */
+.hospital-logo { width: 100%; max-width: 220px; height: auto; margin-bottom: 1.25rem; border-radius: var(--radius); background: #fff; }
+.site-footer .hospital-logo { max-width: 180px; margin: 1rem 0 0; }

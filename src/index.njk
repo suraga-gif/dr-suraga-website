@@ -7,8 +7,8 @@ permalink: /
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-photo">
-      <img src="/assets/photos/dr-suraga-white-coat-full.jpg"
-        alt="Dr. Suraga Belakawadi in a white coat"
+      <img src="/assets/photos/dr-suraga-portrait.jpg"
+        alt="Dr. Suraga Belakawadi, surgical oncologist, in a white coat"
         sizes="(min-width: 60em) 40vw, 100vw"
         loading="eager" fetchpriority="high">
     </div>
@@ -66,8 +66,8 @@ permalink: /
 <section class="section" aria-labelledby="about-heading">
   <div class="container about-grid">
     <div class="about-photo">
-      <img src="/assets/photos/dr-suraga-white-coat.jpg"
-        alt="Portrait of Dr. Suraga Belakawadi"
+      <img src="/assets/photos/dr-suraga-clinic.jpg"
+        alt="Dr. Suraga Belakawadi at his desk in the clinic"
         sizes="(min-width: 60em) 30vw, 100vw">
     </div>
     <div class="about-text">
@@ -135,6 +135,7 @@ permalink: /
     <h2 id="visit-heading">Visit the clinic</h2>
     <div class="visit-grid">
     <div>
+      {% include "partials/hospital-logo.njk" %}
       <dl class="visit-list">
         <div><dt>{{ icon("clock") }}Clinic hours</dt><dd>{{ site.hours }}</dd></div>
         <div><dt>{{ icon("pin") }}Hospital</dt><dd>{{ site.hospital }}<br>{{ site.address or site.area }}</dd></div>

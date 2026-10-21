@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Book an appointment
-description: Request an appointment with Dr. Suraga Belakawadi, robotic and laparoscopic surgical oncologist at KIMS-MACS Hospital, Mahadevpura, Bengaluru. Clinic Monday to Saturday, 9 am to 3 pm.
+description: Request an appointment with Dr. Suraga Belakawadi, robotic and laparoscopic surgical oncologist at KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru. Clinic Monday to Saturday, 9 am to 3 pm.
 permalink: /appointment/
 ---
 {% from "partials/icons.njk" import icon %}
@@ -117,6 +117,7 @@ permalink: /appointment/
 
   <aside class="contact-panel" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Contact the clinic</h2>
+    {% include "partials/hospital-logo.njk" %}
     <div class="contact-actions">
       <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
       <a class="btn btn-secondary" href="{{ site.phone | telLink }}">{{ icon("phone") }}Call {{ site.phoneDisplay }}</a>
