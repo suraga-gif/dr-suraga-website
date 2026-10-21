@@ -1,0 +1,10 @@
+// Cloudflare hosting settings: serve the built website (the _site folder) as static files.
+// Cloudflare runs "npm run build" and then "npx wrangler deploy" on every change pushed to GitHub.
+{
+  "name": "dr-suraga-website",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  }
+}
