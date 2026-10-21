@@ -219,9 +219,6 @@ strong { font-weight: 600; }
   .treat-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; }
 }
 
-/* Robotic surgery feature */
-.robotic-text { max-width: 44rem; }
-
 /* About */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 .about-photo { max-width: 24rem; }

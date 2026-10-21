@@ -133,7 +133,7 @@ permalink: /appointment/
         <p>The map is loaded from Google Maps only when you choose to see it.</p>
         <div class="button-row">
           <button type="button" class="btn btn-secondary map-load">{{ icon("pin") }}Show map</button>
-          <a class="btn btn-secondary" href="{{ site.mapUrl }}" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-secondary" href="{{ site.googleBusiness or site.mapUrl }}" rel="noopener">Open in Google Maps</a>
         </div>
       </div>
     </div>

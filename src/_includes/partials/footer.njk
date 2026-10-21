@@ -3,9 +3,7 @@
   <div class="container footer-grid">
     <div class="footer-id">
       <p class="footer-name">{{ site.name }}</p>
-      <p class="footer-degrees">{{ site.degrees }}</p>
       <p>{{ site.title }}<br>{{ site.position }}, {{ site.hospital }}, {{ site.area }}</p>
-      {% include "partials/hospital-logo.njk" %}
     </div>
 
     <div>
@@ -25,6 +23,7 @@
         {%- if site.social.linkedin %}<li>{{ icon("linkedin") }}<a href="{{ site.social.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
         {%- if site.social.youtube %}<li>{{ icon("youtube") }}<a href="{{ site.social.youtube }}" rel="noopener">YouTube</a></li>{% endif %}
         {%- if site.social.facebook %}<li>{{ icon("facebook") }}<a href="{{ site.social.facebook }}" rel="noopener">Facebook</a></li>{% endif %}
+        {%- if site.googleBusiness %}<li>{{ icon("pin") }}<a href="{{ site.googleBusiness }}" rel="noopener">Find us on Google</a></li>{% endif %}
       </ul>
     </div>
   </div>

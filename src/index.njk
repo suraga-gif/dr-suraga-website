@@ -27,7 +27,6 @@ permalink: /
         <a class="btn btn-primary" href="/appointment/">Book appointment</a>
         <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
       </div>
-      <p class="hero-hours">{{ icon("clock") }}Clinic: {{ site.hours }}</p>
     </div>
   </div>
 </section>
@@ -51,19 +50,7 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-wash" aria-labelledby="robotic-heading">
-  <div class="container">
-    <div class="robotic-text">
-      <h2 id="robotic-heading">{{ home.roboticHeading }}</h2>
-      {{ home.roboticText | markdown | safe }}
-      <div class="button-row">
-        <a class="btn btn-secondary" href="/robotic-surgery/">How robotic surgery works</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="about-heading">
+<section class="section section-wash" aria-labelledby="about-heading">
   <div class="container about-grid">
     <div class="about-photo">
       <img src="/assets/photos/dr-suraga-clinic.jpg"
@@ -82,7 +69,7 @@ permalink: /
 
 {%- set latestPosts = collections.posts | limit(3) %}
 {%- if latestPosts.length %}
-<section class="section section-wash" aria-labelledby="blog-heading">
+<section class="section" aria-labelledby="blog-heading">
   <div class="container">
     <div class="section-head section-head-row">
       <div>
@@ -101,7 +88,7 @@ permalink: /
 {%- set homeVideos = collections.videos | whereFeatured | limit(3) %}
 {%- if not homeVideos.length %}{% set homeVideos = collections.videos | limit(3) %}{% endif %}
 {%- if homeVideos.length %}
-<section class="section" aria-labelledby="videos-heading">
+<section class="section section-wash" aria-labelledby="videos-heading">
   <div class="container">
     <div class="section-head section-head-row">
       <div>
@@ -139,14 +126,13 @@ permalink: /
       <dl class="visit-list">
         <div><dt>{{ icon("clock") }}Clinic hours</dt><dd>{{ site.hours }}</dd></div>
         <div><dt>{{ icon("pin") }}Hospital</dt><dd>{{ site.hospital }}<br>{{ site.address or site.area }}</dd></div>
-        <div><dt>{{ icon("phone") }}Phone</dt><dd><a href="{{ site.phone | telLink }}">{{ site.phoneDisplay }}</a></dd></div>
       </dl>
     </div>
     <div class="visit-actions">
       {{ home.visitNote | markdown | safe }}
       <div class="button-row">
         <a class="btn btn-primary" href="/appointment/">Book appointment</a>
-        <a class="btn btn-secondary" href="{{ site.mapUrl }}" rel="noopener">{{ icon("pin") }}Get directions</a>
+        <a class="btn btn-secondary" href="{{ site.googleBusiness or site.mapUrl }}" rel="noopener">{{ icon("pin") }}Get directions</a>
       </div>
     </div>
     </div>

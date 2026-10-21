@@ -389,15 +389,6 @@ content:
       - name: treatIntro
         label: Text above the list of cancers
         type: text
-      - name: roboticHeading
-        label: Robotic surgery section heading
-        type: string
-      - name: roboticText
-        label: Robotic surgery section text
-        type: rich-text
-        options:
-          format: markdown
-          media: false
       - name: aboutText
         label: About section text
         type: rich-text
@@ -460,6 +451,10 @@ content:
         type: text
       - name: mapUrl
         label: Google Maps link
+        type: string
+      - name: googleBusiness
+        label: Google Business Profile link
+        description: Open your profile on Google Maps, tap Share, then Copy link, and paste it here. The website's "Get directions" buttons will open it.
         type: string
       - name: social
         label: Social media links
