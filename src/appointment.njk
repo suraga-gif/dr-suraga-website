@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Book an appointment
-description: Request an appointment with Dr. Suraga Belakawadi, robotic and laparoscopic surgical oncologist at KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru. Clinic Monday to Saturday, 9 am to 3 pm.
+description: Request an in-person or video consultation with Dr. Suraga Belakawadi, robotic and laparoscopic surgical oncologist at KIMS RENOVA Oncology Institute, Mahadevpura, Bengaluru. Clinic Monday to Saturday, 9 am to 3 pm.
 permalink: /appointment/
 ---
 {% from "partials/icons.njk" import icon %}
@@ -14,7 +14,7 @@ permalink: /appointment/
       </ol>
     </nav>
     <h1>Book an appointment</h1>
-    <p class="page-lede">Send a request and the clinic will call you to confirm the date and time. For a quicker reply, call or send a WhatsApp message.</p>
+    <p class="page-lede">Consult in person at the clinic or by video. Send a request and the clinic will call you to confirm the date and time. For a quicker reply, call or send a WhatsApp message.</p>
   </div>
 </section>
 
@@ -68,6 +68,15 @@ permalink: /appointment/
           </div>
         </fieldset>
       </div>
+
+      <fieldset class="field">
+        <legend>How would you like to consult?</legend>
+        <div class="choices">
+          <label><input type="radio" name="consultation_mode" value="In person at the clinic" checked> In person at the clinic</label>
+          <label><input type="radio" name="consultation_mode" value="Video consultation" aria-describedby="f-video-hint"> Video consultation</label>
+        </div>
+        <p class="hint" id="f-video-hint">Video consultations suit follow-ups, second opinions and reviewing reports. If an examination is needed, an in-person visit will be suggested. The clinic will send the video call details when confirming your appointment.</p>
+      </fieldset>
 
       <div class="field">
         <label for="f-concern">Area of concern</label>

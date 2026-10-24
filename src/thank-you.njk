@@ -10,6 +10,7 @@ eleventyExcludeFromCollections: true
   <div class="container prose">
     <h1>Thank you. Your request has been sent.</h1>
     <p>The clinic will call you on the number you gave to confirm the date and time of your appointment. Clinic hours are {{ site.hours | lower }}.</p>
+    <p>If you asked for a video consultation, the video call details will be shared with you when your appointment is confirmed.</p>
     <p>If your appointment is urgent, or you haven’t heard back within one working day, please call or send a WhatsApp message.</p>
     <div class="button-row">
       <a class="btn btn-whatsapp" href="{{ site.whatsapp | whatsappLink(site.whatsappMessage) }}">{{ icon("whatsapp") }}WhatsApp</a>
