@@ -50,6 +50,14 @@ To delete a post, use the **⋯** menu next to it and choose **Delete**.
 3. Click **Save**. It appears on the Blog page, the home page and the matching cancer page, with swipeable slides.
 4. To post it on Google: open **drsuraga.com/share/**, find it, copy the **Google update text** and **article link**, and download the **first slide** for the photo.
 
+## Add a newspaper column
+
+1. Click **Newspaper columns**, then **Add an entry**.
+2. Fill in the **Headline**, **Newspaper**, **Publish date** and a **Short summary** (2 to 3 sentences).
+3. Add a **clipping photo** (a clear photo or scan of the printed column), the **column text** (only if your agreement with the newspaper allows it), and/or the **link** to the newspaper's website or e-paper.
+4. Optionally choose a **Topic**, so it also shows on the matching cancer page.
+5. Click **Save**. It appears on the Blog page, under the **Newspaper columns** button, and in the Share kit, ready for a Google update.
+
 ## Add a video
 
 1. On YouTube or Instagram, tap **Share**, then **Copy link**.

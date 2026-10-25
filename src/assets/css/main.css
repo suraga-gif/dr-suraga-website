@@ -582,3 +582,6 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 .carousel-count { margin: 0; min-width: 4rem; text-align: center; font-family: var(--font-head); font-size: var(--small); color: var(--ink-soft); }
 .post-card-carousel .post-card-image img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
 .share-scheduled { display: inline-block; margin: 0 0 0.75rem; padding: 0.3rem 0.75rem; border-radius: 999px; background: #FFF4D6; color: #5C4400; font-family: var(--font-head); font-size: var(--tiny); font-weight: 500; }
+
+/* Newspaper columns */
+.column-source { margin: 0 0 1.5rem; padding: 0.9rem 1rem; background: var(--blue-wash); border-left: 4px solid var(--blue); border-radius: var(--radius); font-size: var(--small); line-height: 1.55; }

@@ -32,7 +32,13 @@ eleventyExcludeFromCollections: true
     {%- for post in collections.scheduledPosts.concat(collections.posts) %}
     {%- set postUrl = site.url + (post.url or post.data.futureUrl) %}
     {%- set googleText -%}
-{%- if post.data.isCarousel and post.data.caption %}
+{%- if post.data.isColumn %}
+{{ post.data.title }}
+
+My column in {{ post.data.newspaper }}: {{ post.data.summary }}
+
+Read the full column on the website.
+{%- elif post.data.isCarousel and post.data.caption %}
 {{ post.data.title }}
 
 {{ post.data.caption | stripHashtagLines | truncate(1350) }}
@@ -77,7 +83,7 @@ Read more: link in bio
         <button type="button" class="btn btn-primary" data-copy-link="{{ googleText | trim }}">Copy Google update text</button>
         <button type="button" class="btn btn-secondary" data-copy-link="{{ postUrl }}">Copy article link</button>
         {%- if post.data.cover %}
-        <a class="btn btn-secondary" href="{{ post.data.cover }}" download>{{ "Download first slide" if post.data.isCarousel else "Download cover image" }}</a>
+        <a class="btn btn-secondary" href="{{ post.data.cover }}" download>{{ "Download first slide" if post.data.isCarousel else ("Download clipping" if post.data.isColumn else "Download cover image") }}</a>
         {%- endif %}
       </div>
 

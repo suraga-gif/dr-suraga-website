@@ -55,6 +55,11 @@ export default function (eleventyConfig) {
     api.getFilteredByGlob("src/blog/**/*.md").filter((p) => !p.data.draft && !p.data.scheduled).sort((a, b) => b.date - a.date)
   );
 
+  // Newspaper columns (published), newest first
+  eleventyConfig.addCollection("columns", (api) =>
+    api.getFilteredByGlob("src/blog/columns/*.md").filter((p) => !p.data.draft && !p.data.scheduled).sort((a, b) => b.date - a.date)
+  );
+
   // Posts and carousels waiting for their publish date, soonest first (shown only in the Share kit)
   eleventyConfig.addCollection("scheduledPosts", (api) =>
     api.getFilteredByGlob("src/blog/**/*.md").filter((p) => p.data.scheduled).sort((a, b) => a.date - b.date)

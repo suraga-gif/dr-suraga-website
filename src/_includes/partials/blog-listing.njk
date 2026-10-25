@@ -23,6 +23,9 @@
     <nav class="topic-filter" aria-label="Blog topics">
       <ul>
         <li><a href="/blog/"{% if not activeCategory %} aria-current="page"{% endif %}>All articles</a></li>
+        {%- if collections.columns.length %}
+        <li><a href="/blog/columns/"{% if activeCategory and activeCategory.slug == "columns" %} aria-current="page"{% endif %}>Newspaper columns</a></li>
+        {%- endif %}
         {%- for cat in categories | categoriesUsedIn(collections.posts) %}
         <li><a href="/blog/category/{{ cat.slug }}/"{% if activeCategory and activeCategory.slug == cat.slug %} aria-current="page"{% endif %}>{{ cat.name }}</a></li>
         {%- endfor %}

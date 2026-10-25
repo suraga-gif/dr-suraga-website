@@ -1,0 +1,10 @@
+---
+# All newspaper columns: /blog/columns/
+layout: layouts/base.njk
+title: Newspaper columns
+description: Newspaper columns on cancer awareness and treatment by Dr. Suraga Belakawadi, surgical oncologist in Bengaluru.
+permalink: /blog/columns/
+---
+{%- set activeCategory = { slug: "columns", name: "Newspaper columns" } %}
+{%- set listPosts = collections.columns %}
+{% include "partials/blog-listing.njk" %}

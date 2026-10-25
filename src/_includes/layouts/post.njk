@@ -8,7 +8,7 @@ layout: layouts/base.njk
   <header class="page-header">
     <div class="container">
       {% include "partials/breadcrumbs.njk" %}
-      <p class="post-category">{{ category }}</p>
+      <p class="post-category">{% if isColumn %}Newspaper column · {{ newspaper }}{% else %}{{ category }}{% endif %}</p>
       <h1>{{ title }}</h1>
       {%- if summary and not isCarousel %}
       <p class="page-lede">{{ summary }}</p>
@@ -25,7 +25,10 @@ layout: layouts/base.njk
     <div class="page-main">
       {%- if reviewPending %}{% include "partials/draft-note.njk" %}{% endif %}
 
-      {%- if isCarousel %}
+      {%- if isColumn %}
+      <p class="column-source">Originally published in <strong>{{ newspaper }}</strong> on {{ page.date | readableDate }}.{% if link %} <a href="{{ link }}" rel="noopener">Read it in {{ newspaper }}</a>{% endif %}</p>
+      {%- if clippings %}{% set slides = clippings %}{% include "partials/carousel.njk" %}{% endif %}
+      {%- elif isCarousel %}
       {% include "partials/carousel.njk" %}
       {%- elif cover %}
       <figure class="post-cover">

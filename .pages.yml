@@ -164,6 +164,70 @@ content:
         label: Hide from website
         type: boolean
 
+  # ---------------------------------------------------------------- Newspaper columns
+  - name: columns
+    label: Newspaper columns
+    type: collection
+    path: src/blog/columns
+    exclude: [columns.11tydata.js]
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, newspaper, date, draft]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Headline of the column
+        type: string
+        required: true
+      - name: newspaper
+        label: Newspaper
+        description: e.g. Deccan Herald, Vijay Karnataka, The Hindu
+        type: string
+        required: true
+      - name: date
+        label: Publish date
+        description: The date it appeared in the newspaper. To schedule it on the website instead, choose a future date; it goes live by itself at about 7 am that day.
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: summary
+        label: Short summary
+        description: Two or three sentences for the blog list, Google results and your Google update.
+        type: text
+        required: true
+      - name: clippings
+        label: Clipping photos (optional)
+        description: A clear photo or scan of the printed column. Several images are fine for a long column.
+        type: image
+        options:
+          media: images
+          multiple:
+            max: 6
+      - name: body
+        label: Column text (optional)
+        description: Paste the full text if your agreement with the newspaper allows it. Otherwise leave empty and use the clipping and link.
+        type: rich-text
+        options:
+          format: markdown
+          media: images
+      - name: link
+        label: Link to the newspaper's website or e-paper (optional)
+        type: string
+      - name: category
+        label: Topic (optional)
+        description: Choose one so the column also appears on the matching cancer page.
+        type: select
+        options:
+          values: *topics
+      - name: draft
+        label: Hide from website
+        type: boolean
+
   # ---------------------------------------------------------------- Videos
   - name: videos
     label: Videos
