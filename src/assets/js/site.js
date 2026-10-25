@@ -38,3 +38,35 @@
     });
   });
 })();
+
+// Carousel slides: swipe on phones, arrow buttons and a "2 / 7" counter everywhere
+(function () {
+  document.querySelectorAll(".carousel").forEach(function (carousel) {
+    var track = carousel.querySelector(".carousel-track");
+    var slides = carousel.querySelectorAll(".carousel-slide");
+    var current = carousel.querySelector(".carousel-current");
+    var prev = carousel.querySelector(".carousel-prev");
+    var next = carousel.querySelector(".carousel-next");
+    if (!track || slides.length < 2) return;
+
+    function index() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function go(i) {
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+    }
+    function update() {
+      var i = index();
+      current.textContent = String(i + 1);
+      prev.disabled = i === 0;
+      next.disabled = i === slides.length - 1;
+    }
+    prev.addEventListener("click", function () { go(index() - 1); });
+    next.addEventListener("click", function () { go(index() + 1); });
+    track.addEventListener("scroll", function () { window.requestAnimationFrame(update); });
+    track.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(index() + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(index() - 1); }
+    });
+    update();
+  });
+})();

@@ -10,13 +10,13 @@ layout: layouts/base.njk
       {% include "partials/breadcrumbs.njk" %}
       <p class="post-category">{{ category }}</p>
       <h1>{{ title }}</h1>
-      {%- if summary %}
+      {%- if summary and not isCarousel %}
       <p class="page-lede">{{ summary }}</p>
       {%- endif %}
       <p class="post-meta">
         <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
         <span aria-hidden="true">|</span>
-        <span>{{ content | readingTime }}</span>
+        <span>{% if isCarousel %}{{ slides | asList | length }} slides{% else %}{{ content | readingTime }}{% endif %}</span>
       </p>
     </div>
   </header>
@@ -25,13 +25,16 @@ layout: layouts/base.njk
     <div class="page-main">
       {%- if reviewPending %}{% include "partials/draft-note.njk" %}{% endif %}
 
-      {%- if cover %}
+      {%- if isCarousel %}
+      {% include "partials/carousel.njk" %}
+      {%- elif cover %}
       <figure class="post-cover">
         <img src="{{ cover }}" alt="{{ coverAlt }}" sizes="(min-width: 64em) 42rem, 100vw" loading="eager">
       </figure>
       {%- endif %}
 
       <div class="prose">
+        {%- if isCarousel %}{{ caption | captionHtml | safe }}{% endif %}
         {{ content | safe }}
       </div>
 

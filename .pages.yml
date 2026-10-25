@@ -25,6 +25,7 @@ content:
     label: Blog posts
     type: collection
     path: src/blog
+    subfolders: false
     exclude: [blog.11tydata.js]
     filename: "{title}.md"
     format: yaml-frontmatter
@@ -101,6 +102,64 @@ content:
       - name: draft
         label: Hide from website
         description: Switch on to save the post without publishing it.
+        type: boolean
+
+  # ---------------------------------------------------------------- Instagram carousels
+  - name: carousels
+    label: Instagram carousels
+    type: collection
+    path: src/blog/carousels
+    exclude: [carousels.11tydata.js]
+    filename: "{title}.md"
+    format: yaml-frontmatter
+    view:
+      fields: [title, date, category, draft]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        description: A short headline for the website, e.g. "5 early signs of mouth cancer".
+        type: string
+        required: true
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Topic
+        type: select
+        required: true
+        options:
+          values: *topics
+      - name: slides
+        label: Slides
+        description: Upload the carousel images in order, first slide first. Square or 4:5 images from Instagram/Canva work best.
+        type: image
+        required: true
+        options:
+          media: images
+          multiple:
+            max: 20
+      - name: caption
+        label: Caption
+        description: Paste the Instagram caption. Lines that contain only hashtags are hidden on the website.
+        type: text
+        required: true
+      - name: summary
+        label: Short summary (optional)
+        description: One or two sentences for the blog list and Google. Leave empty to use the start of the caption.
+        type: text
+      - name: instagram
+        label: Instagram post link
+        description: Paste the link to this carousel on Instagram.
+        type: string
+      - name: draft
+        label: Hide from website
         type: boolean
 
   # ---------------------------------------------------------------- Videos

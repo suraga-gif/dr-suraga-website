@@ -563,3 +563,21 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 .share-insta summary { display: flex; align-items: center; gap: 0.5rem; }
 .share-insta summary .icon { width: 1.1rem; height: 1.1rem; color: var(--blue); }
 .share-insta textarea { margin-top: 0.75rem; }
+
+/* Instagram carousel posts */
+.carousel { margin: 0 0 2rem; }
+.carousel-track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  border-radius: var(--radius); background: var(--blue-wash);
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; }
+.carousel-slide img { width: 100%; max-height: 80vh; object-fit: contain; }
+.carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: 0.75rem; }
+.carousel-controls button {
+  width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--blue); background: var(--surface);
+  color: var(--blue); font-size: 1.75rem; line-height: 1; cursor: pointer;
+}
+.carousel-controls button:disabled { opacity: 0.35; cursor: default; }
+.carousel-count { margin: 0; min-width: 4rem; text-align: center; font-family: var(--font-head); font-size: var(--small); color: var(--ink-soft); }
+.post-card-carousel .post-card-image img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }

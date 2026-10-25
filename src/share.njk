@@ -32,6 +32,13 @@ eleventyExcludeFromCollections: true
     {%- for post in collections.posts %}
     {%- set postUrl = site.url + post.url %}
     {%- set googleText -%}
+{%- if post.data.isCarousel and post.data.caption %}
+{{ post.data.title }}
+
+{{ post.data.caption | stripHashtagLines | truncate(1350) }}
+
+See all the slides on the website.
+{%- else %}
 {{ post.data.title }}
 
 {{ post.data.summary }}
@@ -44,6 +51,7 @@ Key points:
 {%- endif %}
 
 Read the full article on the website.
+{%- endif %}
     {%- endset %}
     {%- set instaText -%}
 {{ post.data.title }}
@@ -66,7 +74,7 @@ Read more: link in bio
         <button type="button" class="btn btn-primary" data-copy-link="{{ googleText | trim }}">Copy Google update text</button>
         <button type="button" class="btn btn-secondary" data-copy-link="{{ postUrl }}">Copy article link</button>
         {%- if post.data.cover %}
-        <a class="btn btn-secondary" href="{{ post.data.cover }}" download>Download cover image</a>
+        <a class="btn btn-secondary" href="{{ post.data.cover }}" download>{{ "Download first slide" if post.data.isCarousel else "Download cover image" }}</a>
         {%- endif %}
       </div>
 

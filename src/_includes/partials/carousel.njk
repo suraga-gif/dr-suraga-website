@@ -1,0 +1,18 @@
+{#- Swipeable slides for an Instagram carousel post. Expects `slides` (list of image paths) and `title`. -#}
+{%- set slideList = slides | asList %}
+<section class="carousel" aria-roledescription="carousel" aria-label="{{ title }}: {{ slideList | length }} slides">
+  <div class="carousel-track" tabindex="0">
+    {%- for slide in slideList %}
+    <figure class="carousel-slide" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slideList | length }}">
+      <img src="{{ slide }}" alt="Slide {{ loop.index }} of {{ slideList | length }}: {{ title }}" sizes="(min-width: 64em) 42rem, 100vw"{% if loop.first %} loading="eager"{% endif %}>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- if slideList.length > 1 %}
+  <div class="carousel-controls">
+    <button type="button" class="carousel-prev" aria-label="Previous slide">‹</button>
+    <p class="carousel-count" aria-live="polite"><span class="carousel-current">1</span> / {{ slideList | length }}</p>
+    <button type="button" class="carousel-next" aria-label="Next slide">›</button>
+  </div>
+  {%- endif %}
+</section>

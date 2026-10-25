@@ -2,6 +2,7 @@ import Image, { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import markdownIt from "markdown-it";
 import { videoInfo } from "./lib/video.js";
 import { schemaGraph } from "./lib/schema.js";
+import { captionHtml, stripHashtagLines } from "./lib/caption.js";
 
 // Font files are copied from the installed @fontsource packages, so no font binaries live in the repo
 const FONT_FILES = [
@@ -51,7 +52,7 @@ export default function (eleventyConfig) {
 
   // Blog posts (hidden drafts left out), newest first
   eleventyConfig.addCollection("posts", (api) =>
-    api.getFilteredByGlob("src/blog/*.md").filter((p) => !p.data.draft).sort((a, b) => b.date - a.date)
+    api.getFilteredByGlob("src/blog/**/*.md").filter((p) => !p.data.draft).sort((a, b) => b.date - a.date)
   );
 
   // Videos with a recognised YouTube or Instagram link, newest first
@@ -118,6 +119,9 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("schemaGraph", schemaGraph);
+  eleventyConfig.addFilter("captionHtml", captionHtml);
+  eleventyConfig.addFilter("stripHashtagLines", stripHashtagLines);
+  eleventyConfig.addFilter("asList", (value) => (Array.isArray(value) ? value : value ? [value] : []));
 
   // Sitemap: every published page except those marked noindex
   eleventyConfig.addFilter("sitemapPages", (pages = []) =>

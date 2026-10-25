@@ -32,6 +32,18 @@ To save a post without publishing it yet, switch on **Hide from website**. Switc
 
 To delete a post, use the **⋯** menu next to it and choose **Delete**.
 
+## Add an Instagram carousel
+
+1. Click **Instagram carousels**, then **Add an entry**.
+2. Fill in:
+   - **Title**: a short headline, e.g. "5 early signs of mouth cancer"
+   - **Publish date** and **Topic**
+   - **Slides**: upload the carousel images **in order**, first slide first (you can select several at once)
+   - **Caption**: paste the Instagram caption (lines with only hashtags are hidden on the website)
+   - **Instagram post link** (optional)
+3. Click **Save**. It appears on the Blog page, the home page and the matching cancer page, with swipeable slides.
+4. To post it on Google: open **drsuraga.com/share/**, find it, copy the **Google update text** and **article link**, and download the **first slide** for the photo.
+
 ## Add a video
 
 1. On YouTube or Instagram, tap **Share**, then **Copy link**.
