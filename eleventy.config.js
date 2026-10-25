@@ -52,7 +52,12 @@ export default function (eleventyConfig) {
 
   // Blog posts (hidden drafts left out), newest first
   eleventyConfig.addCollection("posts", (api) =>
-    api.getFilteredByGlob("src/blog/**/*.md").filter((p) => !p.data.draft).sort((a, b) => b.date - a.date)
+    api.getFilteredByGlob("src/blog/**/*.md").filter((p) => !p.data.draft && !p.data.scheduled).sort((a, b) => b.date - a.date)
+  );
+
+  // Posts and carousels waiting for their publish date, soonest first (shown only in the Share kit)
+  eleventyConfig.addCollection("scheduledPosts", (api) =>
+    api.getFilteredByGlob("src/blog/**/*.md").filter((p) => p.data.scheduled).sort((a, b) => a.date - b.date)
   );
 
   // Videos with a recognised YouTube or Instagram link, newest first

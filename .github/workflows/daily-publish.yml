@@ -1,0 +1,43 @@
+# Publishes scheduled blog posts and carousels every morning.
+# At about 7 am India time it checks for posts dated today; if there are any, it makes an
+# empty commit, which tells Cloudflare to rebuild the website so they go live.
+name: Daily publish
+
+on:
+  schedule:
+    - cron: "35 1 * * *" # 01:35 UTC = 07:05 India time (GitHub may start a few minutes late)
+  workflow_dispatch: {} # also allows a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+
+      - name: Find posts scheduled for today
+        id: due
+        run: |
+          titles="$(node .github/scripts/due-today.mjs)"
+          echo "Due today: ${titles:-none}"
+          {
+            echo "titles<<EOF"
+            echo "$titles"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Trigger the website rebuild
+        if: steps.due.outputs.titles != ''
+        env:
+          TITLES: ${{ steps.due.outputs.titles }}
+        run: |
+          git config user.name "Scheduled publish"
+          git config user.email "suraga.b@gmail.com"
+          git commit --allow-empty -m "Publish scheduled post(s) for $(TZ=Asia/Kolkata date +%F)" -m "$TITLES"
+          git push

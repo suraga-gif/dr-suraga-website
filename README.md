@@ -25,6 +25,12 @@ Every time you click **Save**, the website updates by itself within about 2 minu
 
 To save a post without publishing it yet, switch on **Hide from website**. Switch it off when it's ready.
 
+## Schedule posts in advance
+
+In **Blog posts** or **Instagram carousels**, choose a **future Publish date** and click **Save**. The post stays hidden and goes live by itself at about **7 am** on that date. You can schedule a whole week (or month) in one sitting.
+
+Scheduled posts appear at the top of **drsuraga.com/share/** with their future link, so you can prepare the matching Google updates in advance.
+
 ## Edit or delete a blog post
 
 1. Click **Blog posts** and open the post.

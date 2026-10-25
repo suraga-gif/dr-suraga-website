@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 <section class="page-header">
   <div class="container">
     <h1>Share kit</h1>
-    <p class="page-lede">Ready-to-paste text for each article, for your Google Business Profile updates and Instagram. Newest articles are at the top.</p>
+    <p class="page-lede">Ready-to-paste text for each article and carousel, for your Google Business Profile updates and Instagram. Scheduled posts are at the top, then published ones, newest first.</p>
   </div>
 </section>
 
@@ -29,8 +29,8 @@ eleventyExcludeFromCollections: true
       </ol>
     </details>
 
-    {%- for post in collections.posts %}
-    {%- set postUrl = site.url + post.url %}
+    {%- for post in collections.scheduledPosts.concat(collections.posts) %}
+    {%- set postUrl = site.url + (post.url or post.data.futureUrl) %}
     {%- set googleText -%}
 {%- if post.data.isCarousel and post.data.caption %}
 {{ post.data.title }}
@@ -65,6 +65,9 @@ Read more: link in bio
 #cancerawareness #onco_outreach #bengaluru
     {%- endset %}
     <article class="share-card">
+      {%- if post.data.scheduled %}
+      <p class="share-scheduled">Scheduled: goes live on {{ post.date | readableDate }} at about 7 am</p>
+      {%- endif %}
       <p class="post-card-meta">{{ post.data.category }} · {{ post.date | readableDate }}</p>
       <h2>{{ post.data.title }}</h2>
 

@@ -43,6 +43,7 @@ content:
         required: true
       - name: date
         label: Publish date
+        description: To schedule, choose a future date. It goes live by itself at about 7 am on that day.
         type: date
         required: true
         options:
@@ -126,6 +127,7 @@ content:
         required: true
       - name: date
         label: Publish date
+        description: To schedule, choose a future date. It goes live by itself at about 7 am on that day.
         type: date
         required: true
         options:
