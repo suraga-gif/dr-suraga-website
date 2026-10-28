@@ -29,6 +29,16 @@ eleventyExcludeFromCollections: true
       </ol>
     </details>
 
+    <details class="share-help">
+      <summary>QR codes for printing and sharing</summary>
+      <ul class="qr-downloads">
+        <li><img src="/assets/img/qr/qr-card-book-appointment.png" alt="" width="72" height="101" eleventy:ignore><span><strong>Clinic card: scan to book</strong><br>Ready to print (A6)</span><a class="btn btn-secondary" href="/assets/img/qr/qr-card-book-appointment.png" download>Download</a></li>
+        <li><img src="/assets/img/qr/qr-book-appointment.png" alt="" width="72" height="72" eleventy:ignore><span><strong>QR: book an appointment</strong><br><a href="/assets/img/qr/qr-book-appointment.svg" download>SVG for printers</a></span><a class="btn btn-secondary" href="/assets/img/qr/qr-book-appointment.png" download>Download</a></li>
+        <li><img src="/assets/img/qr/qr-website.png" alt="" width="72" height="72" eleventy:ignore><span><strong>QR: website home page</strong><br><a href="/assets/img/qr/qr-website.svg" download>SVG for printers</a></span><a class="btn btn-secondary" href="/assets/img/qr/qr-website.png" download>Download</a></li>
+        <li><img src="/assets/img/qr/qr-links.png" alt="" width="72" height="72" eleventy:ignore><span><strong>QR: links page</strong> (book, WhatsApp, call, articles)<br><a href="/assets/img/qr/qr-links.svg" download>SVG for printers</a></span><a class="btn btn-secondary" href="/assets/img/qr/qr-links.png" download>Download</a></li>
+      </ul>
+    </details>
+
     {%- for post in collections.scheduledPosts.concat(collections.posts) %}
     {%- set postUrl = site.url + (post.url or post.data.futureUrl) %}
     {%- set googleText -%}

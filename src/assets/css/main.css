@@ -585,3 +585,8 @@ body { padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-botto
 
 /* Newspaper columns */
 .column-source { margin: 0 0 1.5rem; padding: 0.9rem 1rem; background: var(--blue-wash); border-left: 4px solid var(--blue); border-radius: var(--radius); font-size: var(--small); line-height: 1.55; }
+.qr-downloads { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.75rem; }
+.qr-downloads li { display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--surface); border-radius: var(--radius); }
+.qr-downloads img { flex-shrink: 0; border: 1px solid var(--line); }
+.qr-downloads span { flex: 1; font-size: var(--small); line-height: 1.45; }
+.qr-downloads .btn { min-height: 40px; padding: 0.4rem 0.9rem; }
