@@ -228,6 +228,37 @@ content:
         label: Hide from website
         type: boolean
 
+  # ---------------------------------------------------------------- Weekly review notes (from the weekly article drafts)
+  - name: weekly-notes
+    label: Weekly review notes
+    type: collection
+    path: editorial/weekly-notes
+    format: yaml-frontmatter
+    operations:
+      create: false
+      rename: false
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: body
+        label: Note
+        type: rich-text
+        options:
+          format: markdown
+          media: false
+
   # ---------------------------------------------------------------- Videos
   - name: videos
     label: Videos
