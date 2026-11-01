@@ -149,7 +149,7 @@ content:
             max: 20
       - name: caption
         label: Caption
-        description: Paste the Instagram caption. Lines that contain only hashtags are hidden on the website.
+        description: Paste the full Instagram caption. On the website, hashtag lines, phone numbers, the "For appointments" line and your sign-off (name, title, hospital) are hidden automatically.
         type: text
         required: true
       - name: summary

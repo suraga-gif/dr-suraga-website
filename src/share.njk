@@ -51,7 +51,7 @@ Read the full column on the website.
 {%- elif post.data.isCarousel and post.data.caption %}
 {{ post.data.title }}
 
-{{ post.data.caption | stripHashtagLines | truncate(1350) }}
+{{ post.data.caption | cleanCaption | truncate(1350) }}
 
 See all the slides on the website.
 {%- else %}
