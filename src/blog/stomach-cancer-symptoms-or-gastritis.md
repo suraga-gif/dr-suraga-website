@@ -1,6 +1,6 @@
 ---
 title: Gastritis or stomach cancer? Signs you shouldn’t ignore
-date: 2026-11-04
+date: 2026-11-02
 category: Upper GI cancers
 summary: Most acidity is just acidity. But some stomach symptoms need an
   endoscopy, not another strip of tablets. Here is how to tell the difference.
