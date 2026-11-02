@@ -41,7 +41,7 @@ Usually that's fine. But **stomach cancer symptoms** can look almost exactly lik
 
 **We tend to wait.** Many people put off a check-up because they're afraid of what the doctor might find, or because they don't want to trouble the family. By the time weight loss or vomiting makes them come in, the disease may have grown.
 
-[DR. SURAGA: Add a line from your practice about how long patients typically take antacids before coming for an endoscopy, and what you wish they had known earlier.]
+In my practice, I often meet patients who have been taking acidity medicines for several months without investigating why their symptoms keep returning. What I want people to understand is that temporary relief is not the same as knowing the cause. If symptoms persist, a proper evaluation is always better than repeatedly changing medicines.
 
 ## Stomach cancer symptoms that need attention
 
