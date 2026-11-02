@@ -1,11 +1,14 @@
 ---
 title: "Pap smear or HPV test: which cervical screening is right?"
-date: 2026-11-10
+date: 2026-11-05
 category: Prevention and screening
-summary: Cervical cancer is one of the few cancers that can almost always be prevented. Here is how the Pap smear and HPV test work, when to start, and what a result means.
-description: "Cervical cancer screening explained simply: Pap smear vs HPV test, when to start, how often, what happens during the test and what an abnormal result means."
-cover: ""
-coverAlt: ""
+summary: Cervical cancer is one of the few cancers that can almost always be
+  prevented. Here is how the Pap smear and HPV test work, when to start, and
+  what a result means.
+description: "Cervical cancer screening explained simply: Pap smear vs HPV test,
+  when to start, how often, what happens during the test and what an abnormal
+  result means."
+cover: /uploads/images/pap-smear-or-hpv-test-2.png
 tags:
   - cervical cancer
   - Pap smear
@@ -13,18 +16,19 @@ tags:
   - screening
   - women's health
 takeaways:
-  - Cervical screening looks for changes before cancer forms, so it's for women who feel completely well.
-  - The HPV test looks for the virus that causes almost all cervical cancers; the Pap smear looks at the cells.
-  - WHO advises screening every 5 to 10 years from age 30 with an HPV test, or every 3 to 5 years from 25 for women living with HIV.
+  - Cervical screening looks for changes before cancer forms, so it's for women
+    who feel completely well.
+  - The HPV test looks for the virus that causes almost all cervical cancers;
+    the Pap smear looks at the cells.
+  - WHO advises screening every 5 to 10 years from age 30 with an HPV test, or
+    every 3 to 5 years from 25 for women living with HIV.
   - An abnormal result usually means a change that can be treated, not cancer.
   - Girls who have had the HPV vaccine still need screening when they grow up.
-instagram: ""
 pillar: B. Screening and early detection
 primary_keyword: cervical cancer screening
 awareness_event: Cervical Cancer Elimination Day of Action (17 November)
 draft: true
 ---
-
 Many women in India have never had a cervical check, and the reasons are familiar. "I have no problems, so why test?" "It will be painful." "What will people at home think?" Some women simply don't know the test exists.
 
 Yet cervical cancer is one of the very few cancers that can usually be prevented altogether. **Cervical cancer screening** finds early changes in the cervix (the neck of the womb) years before they could turn into cancer, when treatment is simple. This article explains the two main tests, when to start, and what your result means.
@@ -45,7 +49,7 @@ The World Health Organization has set a goal for every country to eliminate cerv
 
 **The HPV test** checks the same kind of sample for the high-risk types of HPV that can cause cancer. Because it finds the cause rather than the changes, it picks up risk earlier. WHO now recommends HPV testing as the preferred screening test.
 
-**VIA (visual inspection with acetic acid)** is a simple test in which a health worker applies dilute vinegar to the cervix and looks for colour changes. It's widely used in government screening programmes in India, especially where laboratories aren't easily available. <!-- REVIEW: confirm current Indian national programme guidance on VIA and HPV testing, age range and interval -->
+**VIA (visual inspection with acetic acid)** is a simple test in which a health worker applies dilute vinegar to the cervix and looks for colour changes. It's widely used in government screening programmes in India, especially where laboratories aren't easily available. 
 
 All three are useful. The best test for you depends on your age, where you are being tested, and what's available. Your doctor will advise you.
 
@@ -56,23 +60,22 @@ WHO's current advice for most women is:
 - **From age 30**, screening with an HPV test every **5 to 10 years**
 - **Women living with HIV**: from age **25**, every **3 to 5 years**
 
-Where only Pap smears are available, they're usually repeated more often, about every 3 years. Your doctor will tell you when your next test is due based on your result. <!-- REVIEW: confirm Pap-only interval recommended in Indian practice -->
+Where only Pap smears are available, they're usually repeated more often, about every 3 years. Your doctor will tell you when your next test is due based on your result. 
 
 You can usually stop screening in later life if your recent results have been normal. Ask your doctor before stopping.
-
-[DR. SURAGA: Add a line from your practice about the most common reason women give for never having been screened, and how you reassure them.]
 
 ## What happens on the day of the test
 
 It's a short outpatient test, usually done by a gynaecologist or a trained nurse.
 
 - **Timing:** book it for a day when you're not having your period.
-- **Before the test:** for a day or two, avoid vaginal creams, douching and intercourse, as these can affect the sample. <!-- REVIEW: confirm standard pre-test advice -->
+- **Before the test:** for a day or two, avoid vaginal creams, douching and intercourse, as these can affect the sample. 
 - **During the test:** you lie on an examination table and a smooth instrument called a speculum is gently placed in the vagina, so the cervix can be seen. A small soft brush collects some cells. This takes a few minutes. Most women feel pressure or mild discomfort, not pain.
+
 - **After the test:** you can go home and carry on normally. A little spotting is possible.
 - **Results:** usually ready within one to two weeks, depending on the laboratory.
 
-**A note on self-sampling.** In some places, women can collect their own sample for an HPV test using a simple swab, in private. Ask whether this is available near you. <!-- REVIEW: check availability of HPV self-sampling in Bengaluru -->
+**A note on self-sampling.** In some places, women can collect their own sample for an HPV test using a simple swab, in private. Ask whether this is available near you. 
 
 ## What does an abnormal result mean?
 
@@ -133,3 +136,4 @@ If you're due for screening, or have had an abnormal result and want to understa
 3. World Health Organization. Global strategy to accelerate the elimination of cervical cancer as a public health problem, 2020. [who.int](https://www.who.int/publications/i/item/9789240014107)
 4. US National Cancer Institute. Cervical Cancer Screening (Pap and HPV testing). [cancer.gov](https://www.cancer.gov/types/cervical/pap-hpv-testing-fact-sheet)
 5. American Cancer Society. Screening Tests for Cervical Cancer. [cancer.org](https://www.cancer.org/cancer/types/cervical-cancer/detection-diagnosis-staging/screening-tests.html)
+
