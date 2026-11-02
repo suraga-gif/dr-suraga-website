@@ -1,11 +1,13 @@
 ---
-title: "Gastritis or stomach cancer? Signs you shouldn’t ignore"
+title: Gastritis or stomach cancer? Signs you shouldn’t ignore
 date: 2026-11-04
 category: Upper GI cancers
-summary: Most acidity is just acidity. But some stomach symptoms need an endoscopy, not another strip of tablets. Here is how to tell the difference.
-description: "Stomach cancer symptoms often look like gastritis or acidity. Learn the warning signs that need an endoscopy, and when to see a doctor in Bengaluru."
-cover: ""
-coverAlt: ""
+summary: Most acidity is just acidity. But some stomach symptoms need an
+  endoscopy, not another strip of tablets. Here is how to tell the difference.
+description: Stomach cancer symptoms often look like gastritis or acidity. Learn
+  the warning signs that need an endoscopy, and when to see a doctor in
+  Bengaluru.
+cover: /uploads/images/gastritis-or-stomach-cancer-awareness.png
 tags:
   - stomach cancer
   - gastritis
@@ -13,17 +15,18 @@ tags:
   - endoscopy
   - H. pylori
 takeaways:
-  - Most acidity and gastritis is not cancer, but early stomach cancer can feel exactly the same.
-  - Weight loss, vomiting, black stools, feeling full very quickly or new symptoms after 45 need an endoscopy.
-  - Antacids can ease symptoms for a while even when something serious is present.
+  - Most acidity and gastritis is not cancer, but early stomach cancer can feel
+    exactly the same.
+  - Weight loss, vomiting, black stools, feeling full very quickly or new
+    symptoms after 45 need an endoscopy.
+  - Antacids can ease symptoms for a while even when something serious is
+    present.
   - An endoscopy with a biopsy is the only reliable way to know what is going on.
-instagram: ""
 pillar: C. Symptoms and when to see a doctor
 primary_keyword: stomach cancer symptoms
 awareness_event: Stomach Cancer Awareness Month (November)
-draft: true
+draft: false
 ---
-
 Almost everyone in India has had "gas" or acidity at some point. A heavy meal, a late dinner, too much tea, and the burning starts. You take an antacid, it settles, and life goes on. So when the burning keeps coming back, most people simply buy a bigger strip of tablets.
 
 Usually that's fine. But **stomach cancer symptoms** can look almost exactly like ordinary gastritis, especially in the early stages. This article explains which stomach complaints are likely to be harmless, which ones need a proper check, and what that check involves.
@@ -54,7 +57,7 @@ Most of these symptoms turn out to have other causes. Still, each of them is a r
 - Tiredness and breathlessness from low haemoglobin (anaemia)
 - Difficulty swallowing, or food feeling stuck in the chest
 
-**Age matters.** Indigestion that begins for the first time after about 45 years of age deserves a closer look, even without any of the signs above. <!-- REVIEW: confirm the age threshold used for prompt endoscopy in new-onset dyspepsia (Indian practice commonly uses 45 to 50 years) -->
+**Age matters.** Indigestion that begins for the first time after about 45 years of age deserves a closer look, even without any of the signs above. 
 
 ## Who is at higher risk?
 
@@ -135,3 +138,4 @@ If your stomach symptoms have been bothering you for weeks, it's worth getting a
 2. US National Cancer Institute. Helicobacter pylori and Cancer (fact sheet). [cancer.gov](https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/h-pylori-fact-sheet)
 3. ASCO / Cancer.Net. Stomach Cancer: Symptoms and Signs. [cancer.net](https://www.cancer.net/cancer-types/stomach-cancer/symptoms-and-signs)
 4. US National Cancer Institute. Gastric Cancer Treatment (PDQ), Patient Version. [cancer.gov](https://www.cancer.gov/types/stomach/patient/stomach-treatment-pdq)
+
