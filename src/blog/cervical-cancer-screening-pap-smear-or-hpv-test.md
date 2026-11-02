@@ -27,7 +27,7 @@ takeaways:
 pillar: B. Screening and early detection
 primary_keyword: cervical cancer screening
 awareness_event: Cervical Cancer Elimination Day of Action (17 November)
-draft: true
+draft: false
 ---
 Many women in India have never had a cervical check, and the reasons are familiar. "I have no problems, so why test?" "It will be painful." "What will people at home think?" Some women simply don't know the test exists.
 
